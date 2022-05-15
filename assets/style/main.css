@@ -1,0 +1,36 @@
+.v-btn {
+  text-transform: capitalize;
+}
+.para-text {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: justified;
+}
+.gradient-text1 {
+  background: linear-gradient(264.75deg, #fe87ff 3.04%, #1905da 99.63%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.gradient-text2 {
+  background: linear-gradient(264.75deg, #fe87ff 3.04%, #1905da 99.63%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.primary-text {
+  color: #1905da;
+}
+.menu-btn {
+  background: linear-gradient(
+    265.07deg,
+    #4a04d8 3.26%,
+    #c202d3 97.81%
+  ) !important;
+}
