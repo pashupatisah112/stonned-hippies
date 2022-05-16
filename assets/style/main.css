@@ -17,7 +17,7 @@
   text-fill-color: transparent;
 }
 .gradient-text2 {
-  background: linear-gradient(264.75deg, #fe87ff 3.04%, #1905da 99.63%);
+  background: linear-gradient(90deg, #737206 3.04%, #555602 99.63%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -29,8 +29,12 @@
 }
 .menu-btn {
   background: linear-gradient(
-    265.07deg,
-    #4a04d8 3.26%,
-    #c202d3 97.81%
+    90deg,
+    #737206 3.26%,
+    #555602 97.81%
   ) !important;
+}
+
+.text-h4{
+  color:  #827c13;
 }

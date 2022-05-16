@@ -12,9 +12,10 @@
                 <p class="text-uppercase para-text">
                     Almost six decades down the line, these last remaining hippies from that era have secretly built a community of stoned hippies rooted in their love for music. Having survived half a century long political wretch, the community has decided to recommence as the hippiedom legacy and to resurrect the solana blockchain with 2222 elusive inhabitants.
                 </p>
+                <v-btn class="menu-btn">Connect Wallet</v-btn>
             </v-col>
             <v-col cols="12" lg="6" md="6" align="center">
-                <v-img :src="require('~/assets/images/5.png')" max-width="300"></v-img>
+                <v-img :src="require('~/assets/images/Our story.png')" max-width="300"></v-img>
             </v-col>
         </v-row>
     </v-container>

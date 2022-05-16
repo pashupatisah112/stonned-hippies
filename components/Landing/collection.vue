@@ -48,7 +48,7 @@ export default {
 </script>
 <style>
 div.gradient-text2{
-    border:1px solid #fe87ff;
+    border:1px solid #737206;
     opacity: 0.6;
     padding: 5px 25px;
     border-radius: 5px;

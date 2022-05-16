@@ -1,5 +1,5 @@
 <template>
-<v-app dark style="background: #05061C;">
+<v-app dark style="background: #1a1f00;">
     <client-only>
         <LayoutAppbar />
         <v-main>

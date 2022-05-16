@@ -20,7 +20,7 @@
 
             </v-col>
             <v-col cols="12" lg="4" align="center">
-                <v-img :src="require('~/assets/images/roadmap-img.png')" class="mt-16" max-width="300"></v-img>
+                <v-img :src="require('~/assets/images/Roadmap.png')" class="mt-16" max-width="300"></v-img>
             </v-col>
         </v-row>
     </v-container>
