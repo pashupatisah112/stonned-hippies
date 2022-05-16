@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Psychedelia";
+  src: url('~/assets/fonts/pure-psychedelia-font/psychedelia.ttf');
+}
+@font-face {
+  font-family: "Poppins";
+  src: url('~/assets/fonts/poppins/Poppins-Regular.ttf');
+}
 .v-btn {
   text-transform: capitalize;
 }
@@ -34,7 +42,15 @@
     #555602 97.81%
   ) !important;
 }
-
+.v-application .caption,.v-application .text-h6,
+.v-application .text-h5,.v-card,.v-list,
+.v-btn__content,.v-data-table,p,h5,small,.title,label,.body-2{
+    font-family: 'Poppins', sans-serif !important;
+}
 .text-h4{
   color:  #827c13;
+}
+.v-application .text-h4{
+  font-family: 'Psychedelia', sans-serif !important;
+
 }
