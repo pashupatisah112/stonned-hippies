@@ -1,31 +1,35 @@
 <template>
     <div>
         <v-app-bar app color="transparent" flat absolute>
-            <v-spacer></v-spacer>
             <v-btn text>
                 Home
             </v-btn>
-            <v-btn text>
-                Discover
+            <v-btn text @click="$vuetify.goTo('#story', options)">
+                Our Story
             </v-btn>
-            <v-btn text>
-                Activity
+            <v-btn text @click="$vuetify.goTo('#collection', options)">
+                Collection
             </v-btn>
-            <v-btn text>
-                Community
-            </v-btn>
-            <v-btn text>
-                Pages
-            </v-btn>
-            <v-btn text>
-                Contact
-            </v-btn>
-            <v-btn rounded class="menu-btn">
-                Connect Wallet
+            <v-btn text @click="$vuetify.goTo('#roadmap', options)">
+                Roadmap
             </v-btn>
         </v-app-bar>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            options: {
+                duration: 300,
+                offset: 0,
+                easing: 'easeInOutCubic'
+
+            },
+        }
+    }
+}
+</script>
 <style>
    
 </style>

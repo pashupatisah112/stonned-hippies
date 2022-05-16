@@ -1,12 +1,12 @@
 <template>
 <v-app dark style="background: #05061C;">
-    <LayoutAppbar />
     <client-only>
+        <LayoutAppbar />
         <v-main>
             <Nuxt />
         </v-main>
+        <LayoutFooter />
     </client-only>
-    <LayoutFooter />
 </v-app>
 </template>
 

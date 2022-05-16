@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-container class="pa-10">
+        <v-container class="pa-10" id="collection">
             <v-row justify="center">
                 <div class="mt-16 gradient-text2">
                     COLLECTION

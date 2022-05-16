@@ -1,16 +1,16 @@
 <template>
 <div>
-    <v-container class="pa-16">
+    <v-container class="pa-16" id="roadmap">
         <v-row justify="center">
             <p class="text-h4">ROAD MAP</p>
         </v-row>
-        <v-row>
-            <v-col cols="12" lg="8">
+        <v-row justify="center">
+            <v-col cols="12" lg="5">
                 <v-timeline>
                     <v-timeline-item v-for="(item, i) in roadmap" :key="i" class="my-16" small>
                         <template v-slot:opposite>
                             <div v-for="(des,j) in item.events" :key="j" class="caption ">
-                                {{des.title}}
+                                <v-icon color="green" small class="mr-2">mdi-check-circle</v-icon>{{des.title}}
                             </div>
                         </template>
                         <span v-text="item.date" class="text-right"></span>
@@ -34,31 +34,22 @@ export default {
             roadmap: [
 
                 {
-                    date: '2021 Q4',
+                    date: '16th May, 2022',
                     events: [{
-                            title: 'Completion of the character concept design'
-                        },
-                        {
-                            title: 'Official twitter account and discord channel launch'
-                        },
-                        {
-                            title: 'Stonned hippies official website launch'
+                            title: 'Pre Launch'
                         }
                     ]
                 },
                 {
-                    date: 'JANUARY 2022',
+                    date: '16th August 2022',
                     events: [{
-                        title: 'Road map announcement'
+                        title: 'First Product Launch'
                     }]
                 },
                 {
-                    date: 'FEBRUARY 2022',
+                    date: '16th November 2022',
                     events: [{
-                            title: 'Completion of the smart contract audit process'
-                        },
-                        {
-                            title: 'Whitelisting begins (select your island)'
+                            title: 'Second Product Launch'
                         }
                     ]
                 },
