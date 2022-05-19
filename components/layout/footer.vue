@@ -4,18 +4,26 @@
             <v-row justify="center">
                 <v-col align="center" cols="12" lg="8" md="10">
                     <p class="text-h4">Don't Miss Out, Stay Updated</p>
-                    <v-row no-gutters class="my-16">
+                    <!-- <v-row no-gutters class="my-16">
                         <v-text-field rounded dense placeholder="Email Address" background-color="#05061C" solo flat class="mr-2"></v-text-field>
                         <v-btn rounded class="menu-btn">Subscribe</v-btn>
                     </v-row>
-                    <small class="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor<br> rhoncus dolor purus non enim praesent </small>
+                    <small class="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor<br> rhoncus dolor purus non enim praesent </small> -->
                     <v-row justify="center" no-gutters class="py-10">
-                        <v-icon small>mdi-twitter</v-icon>
-                        <v-icon small class="mx-2">mdi-facebook</v-icon>
-                        <v-icon small>mdi-linkedin</v-icon>
+                        <v-icon small @click="openLink('https://twitter.com/StonedHippies?t=EvLv7lx-XqFOU4agae2WAA&s=09')">mdi-twitter</v-icon>
+                        <v-icon small class="mx-2" @click="openLink('https://discord.gg/dG4h2Xhx')">mdi-discord</v-icon>
                     </v-row>
                 </v-col>
             </v-row>
         </v-container>
     </div>
 </template>
+<script>
+export default {
+    methods:{
+        openLink(item){
+            window.location=item
+        }
+    }
+}
+</script>
