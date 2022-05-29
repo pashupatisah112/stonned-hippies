@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  stonned-hippies:
+    container_name: stonned-hippies
+    hostname: stonned-hippies-host
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    user: root:root
+    port: 80:3000
+
+
