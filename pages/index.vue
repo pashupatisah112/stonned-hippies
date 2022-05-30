@@ -1,10 +1,10 @@
 <template>
   <div>
      <LandingMain />
-     <LandingStory />
+     <!-- <LandingStory /> -->
      <!-- <LandingCollection /> -->
-     <LandingRealm />
-     <LandingRoadmap />
+     <!-- <LandingRealm />
+     <LandingRoadmap /> -->
 
   </div>
 </template>

@@ -1,20 +1,40 @@
 <template>
 <div>
-    <video autoplay loop id="bgVideo" class="mt-n16" style="">
-        <source :src="require('~/assets/videos/landing-video.mp4')" type="video/mp4">
+    <video autoplay muted loop id="bgVideo" class="mt-n16" @click="playvid()">
+        <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
+    <!-- <audio controls autoplay>
+        <source :src="require('~/assets/videos/main-audio.mp3')" type="audio/mpeg">
+
+        Your browser does not support the audio element.
+    </audio>
+    <v-btn ref="playbtn" @click="playvid()">play</v-btn> -->
 
 </div>
 </template>
 
 <script>
 export default {
+    mounted() {
+        // this.playvid()
+    },
     methods: {
         getHeight() {
             return window.innerHeight - 60
         },
-    }
+        playvid() {
+            var vid = document.getElementById("bgVideo");
+            vid.muted = false
+            console.log('moved')
+
+            // vid.play()
+            // setTimeout(function () {
+            //     vid.muted=false
+            // }, 2000);
+        }
+    },
+
 }
 </script>
 

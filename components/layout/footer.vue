@@ -22,7 +22,7 @@
 export default {
     methods:{
         openLink(item){
-            window.location=item
+            window.open(item, "_blank");
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
 <v-app dark style="background: #1a1f00;">
     <client-only>
-        <LayoutAppbar />
+        <!-- <LayoutAppbar /> -->
         <v-main>
             <Nuxt />
         </v-main>
