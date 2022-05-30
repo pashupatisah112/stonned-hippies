@@ -8,9 +8,9 @@
             <v-btn text @click="goTo('#story')">
                 Our Story
             </v-btn>
-            <v-btn text @click="goTo('#collection')">
+            <!-- <v-btn text @click="goTo('#collection')">
                 Collection
-            </v-btn>
+            </v-btn> -->
             <v-btn text @click="goTo('#roadmap')">
                 Roadmap
             </v-btn>

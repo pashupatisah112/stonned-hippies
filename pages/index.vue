@@ -2,7 +2,7 @@
   <div>
      <LandingMain />
      <LandingStory />
-     <LandingCollection />
+     <!-- <LandingCollection /> -->
      <LandingRealm />
      <LandingRoadmap />
 
