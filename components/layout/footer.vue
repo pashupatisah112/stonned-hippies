@@ -11,7 +11,7 @@
                     <small class="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor<br> rhoncus dolor purus non enim praesent </small> -->
                     <v-row justify="center" no-gutters class="py-10">
                         <v-icon small @click="openLink('https://twitter.com/StonedHippies?t=EvLv7lx-XqFOU4agae2WAA&s=09')">mdi-twitter</v-icon>
-                        <v-icon small class="mx-2" @click="openLink('https://discord.gg/dG4h2Xhx')">mdi-discord</v-icon>
+                        <v-icon small class="mx-2" @click="openLink('https://discord.gg/FNqSVmzEw3')">mdi-discord</v-icon>
                     </v-row>
                 </v-col>
             </v-row>
