@@ -1,23 +1,32 @@
 <template>
 <div>
-    <video autoplay muted loop id="bgVideo" class="mt-n16" @click="playvid()">
+    <video muted loop id="bgVideo" class="mt-n16">
         <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
-    <!-- <audio controls autoplay>
-        <source :src="require('~/assets/videos/main-audio.mp3')" type="audio/mpeg">
+    <v-overlay :absolute="absolute" :value="overlay" :opacity="opacity">
+        <v-container>
+            <v-row>
+                <v-col align="right">
+                    <v-img :src="require('~/assets/images/Static-text.png')" style="margin-bottom:-110px" max-width="500"></v-img>
+                    <v-card flat color="transparent" class="mt-n16"><p class="start-btn" @click="playvid()">GET IN ALREADY</p></v-card>
+                </v-col>
+            </v-row>
+        </v-container>
 
-        Your browser does not support the audio element.
-    </audio>
-    <v-btn ref="playbtn" @click="playvid()">play</v-btn> -->
+    </v-overlay>
 
 </div>
 </template>
 
 <script>
 export default {
-    mounted() {
-        // this.playvid()
+    data() {
+        return {
+            absolute: true,
+            overlay: true,
+            opacity:0.95
+        }
     },
     methods: {
         getHeight() {
@@ -25,13 +34,9 @@ export default {
         },
         playvid() {
             var vid = document.getElementById("bgVideo");
+            vid.play()
             vid.muted = false
-            console.log('moved')
-
-            // vid.play()
-            // setTimeout(function () {
-            //     vid.muted=false
-            // }, 2000);
+            this.overlay=false
         }
     },
 
@@ -54,5 +59,14 @@ export default {
     padding: 20px;
     margin-left: 15%;
     margin-top: 20%
+}
+
+.start-btn {
+    font-size: 55px;
+    cursor: pointer;
+    z-index: 5000;
+}
+.no-hover:hover{
+    background-color: none;
 }
 </style>

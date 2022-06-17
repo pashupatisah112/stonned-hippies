@@ -47,10 +47,10 @@
 .v-btn__content,.v-data-table,p,h5,small,.title,label,.body-2{
     font-family: 'Poppins', sans-serif !important;
 }
-.text-h4{
+.text-h4,p{
   color:  #827c13;
 }
-.v-application .text-h4{
+.v-application .text-h4,p{
   font-family: 'Psychedelia', sans-serif !important;
 
 }
