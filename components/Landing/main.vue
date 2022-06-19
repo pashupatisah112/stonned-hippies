@@ -1,21 +1,21 @@
 <template>
 <div>
     <video muted loop id="bgVideo" class="mt-n16">
-        <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4">
+        <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
         Your browser does not support HTML5 video.
     </video>
     <v-overlay :absolute="absolute" :value="overlay" :opacity="opacity">
-        <v-container>
-            <v-row>
-                <v-col align="right">
-                    <v-img :src="require('~/assets/images/Static-text.png')" style="margin-bottom:-110px" max-width="500"></v-img>
-                    <v-card flat color="transparent" class="mt-n16"><p class="start-btn" @click="playvid()">GET IN ALREADY</p></v-card>
-                </v-col>
-            </v-row>
-        </v-container>
+        <v-card max-width="500" style="padding:50px" color="transparent" flat>
+            <v-col align="right">
+                <v-img :src="require('~/assets/images/Static-text.png')">
+                <v-card color="transparent" flat style="position:absolute;bottom:0;right:0">
+                    <p class="start-btn ml-10" @click="playvid()">GET IN ALREADY</p>
+                </v-card>
+                </v-img>
 
+            </v-col>
+        </v-card>
     </v-overlay>
-
 </div>
 </template>
 
@@ -25,22 +25,21 @@ export default {
         return {
             absolute: true,
             overlay: true,
-            opacity:0.95
-        }
+            opacity: 1,
+        };
     },
     methods: {
         getHeight() {
-            return window.innerHeight - 60
+            return window.innerHeight - 60;
         },
         playvid() {
             var vid = document.getElementById("bgVideo");
-            vid.play()
-            vid.muted = false
-            this.overlay=false
-        }
+            vid.play();
+            vid.muted = false;
+            this.overlay = false;
+        },
     },
-
-}
+};
 </script>
 
 <style>
@@ -58,15 +57,16 @@ export default {
     width: 100%;
     padding: 20px;
     margin-left: 15%;
-    margin-top: 20%
+    margin-top: 20%;
 }
 
 .start-btn {
-    font-size: 55px;
+    font-size: 40px;
     cursor: pointer;
     z-index: 5000;
 }
-.no-hover:hover{
+
+.no-hover:hover {
     background-color: none;
 }
 </style>
