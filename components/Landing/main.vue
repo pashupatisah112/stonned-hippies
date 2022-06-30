@@ -9,9 +9,10 @@
             <v-col align="right">
                 <v-img :src="require('~/assets/images/Static-text.png')">
                 <v-card color="transparent" flat style="position:absolute;bottom:0;right:0">
-                    <p class="start-btn ml-10" @click="playvid()">GET IN ALREADY</p>
+                    <p class="start-btn ml-10">GET IN ALREADY</p>
                 </v-card>
                 </v-img>
+                <v-img :src="require('~/assets/images/link.png')"  @click="playvid()" class="mt-2 mx-auto link" max-width="300"></v-img>
 
             </v-col>
         </v-card>
@@ -62,8 +63,10 @@ export default {
 
 .start-btn {
     font-size: 40px;
-    cursor: pointer;
     z-index: 5000;
+}
+.link{
+    cursor: pointer;
 }
 
 .no-hover:hover {
