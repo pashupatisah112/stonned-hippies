@@ -12,7 +12,7 @@
                     <p class="start-btn ml-10">GET IN ALREADY</p>
                 </v-card>
                 </v-img>
-                <v-img :src="require('~/assets/images/link.png')"  @click="playvid()" class="mt-2 mx-auto link" max-width="300"></v-img>
+                <v-img :src="require('~/assets/images/Link.png')"  @click="playvid()" class="mt-2 mx-auto link" max-width="300"></v-img>
 
             </v-col>
         </v-card>
