@@ -1,17 +1,18 @@
 <template>
 <div>
-    <v-app-bar app color="transparent" flat absolute>
+    <v-app-bar color="transparent" flat absolute>
+        <v-spacer></v-spacer>
         <div class="hidden-md-and-down">
-            <v-btn text @click="goTo('#bgVideo')">
+            <v-btn text @click="$store.commit('utility/changeRoute','/')">
                 Home
             </v-btn>
-            <v-btn text @click="goTo('#story')">
+            <v-btn text @click="$store.commit('utility/changeRoute','/story')">
                 Our Story
             </v-btn>
             <!-- <v-btn text @click="goTo('#collection')">
                 Collection
             </v-btn> -->
-            <v-btn text @click="goTo('#roadmap')">
+            <v-btn text @click="$store.commit('utility/changeRoute','/roadmap')">
                 Roadmap
             </v-btn>
         </div>
@@ -20,7 +21,7 @@
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app absolute temporary dark color="#827c13">
         <v-list nav dense>
-            <v-list-item v-for="(item,i) in items" :key="i" @click="goTo(item.link)">
+            <v-list-item v-for="(item,i) in items" :key="i" @click="$store.commit('utility/changeRoute',item.link)">
                 <v-list-item-title>
                     {{item.title}}
                 </v-list-item-title>
@@ -48,24 +49,19 @@ export default {
                 },
                 {
                     title: 'Our Story',
-                    link: '#story'
+                    link: '/story'
                 },
-                {
-                    title: 'Collection',
-                    link: '#collection'
-                },
+                // {
+                //     title: 'Collection',
+                //     link: '#collection'
+                // },
                 {
                     title: 'Roadmap',
-                    link: '#roadmap'
+                    link: '/roadmap'
                 },
             ]
         }
     },
-    methods: {
-        goTo(item) {
-            this.$vuetify.goTo(item, this.options)
-        }
-    }
 }
 </script>
 
