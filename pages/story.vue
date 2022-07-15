@@ -2,8 +2,8 @@
 <div id="story" class="mt-16">
     <v-img :src="require('~/assets/images/story.png')" :height="getHeight('adjust')"></v-img>
     <v-card :height="getHeight('fix')" flat color="background">
-        <v-container class="pa-16">
-            <v-row>
+        <v-container class="pa-lg-16">
+            <v-row justify="center">
                 <v-col cols="12" lg="6" md="6">
                     <div class="title-box">
                         <p class="text-h4">OUR STORY</p>
@@ -29,12 +29,11 @@
 export default {
     methods: {
         getHeight(value) {
-            if (value == 'adjust') {
-                return window.innerHeight - 60
-
-            } else {
-                return window.innerHeight
-            }
+            // if (value == 'adjust') {
+            //     return window.innerHeight - 60
+            // } else {
+            //     return window.innerHeight
+            // }
         }
     }
 }
