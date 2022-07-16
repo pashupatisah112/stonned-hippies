@@ -6,10 +6,12 @@
     <v-btn icon v-else @click="soundOn()" x-large class="vol-btn">
         <v-icon x-large>mdi-volume-mute</v-icon>
     </v-btn>
-    <video muted loop id="bgVideo" class="mt-n16">
-        <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
-        Your browser does not support HTML5 video.
-    </video>
+    <v-card>
+        <video muted loop id="bgVideo" class="mt-n16">
+            <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
+            Your browser does not support HTML5 video.
+        </video>
+    </v-card>
     <v-overlay :absolute="absolute" :value="overlay" :opacity="opacity" @click="playvid()">
         <v-card max-width="500" style="padding:50px" color="transparent" flat>
             <v-col align="right">
@@ -36,9 +38,16 @@ export default {
             playing: false
         };
     },
+    computed: {
+        
+    },
     methods: {
-        getHeight() {
-            return window.innerHeight - 60;
+getHeight() {
+            switch (this.$vuetify.breakpoint.name) {
+                case 'md':
+                case 'lg':
+                    return window.innerHeight - 60;
+            }
         },
         playvid() {
             var vid = document.getElementById("bgVideo");
@@ -57,7 +66,7 @@ export default {
             console.log('ok')
             var vid = document.getElementById("bgVideo");
             vid.muted = true
-                        this.playing = false
+            this.playing = false
 
         }
     },

@@ -81,12 +81,12 @@ export default {
     },
     methods: {
         getHeight(value) {
-            if (value == 'adjust') {
-                return window.innerHeight - 60
+            // if (value == 'adjust') {
+            //     return window.innerHeight - 60
 
-            } else {
-                return window.innerHeight
-            }
+            // } else {
+            //     return window.innerHeight
+            // }
         }
     }
 }

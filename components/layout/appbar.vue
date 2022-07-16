@@ -45,7 +45,7 @@ export default {
             },
             items: [{
                     title: 'Home',
-                    link: '#bgVideo'
+                    link: '/'
                 },
                 {
                     title: 'Our Story',
@@ -64,7 +64,3 @@ export default {
     },
 }
 </script>
-
-<style>
-
-</style>
