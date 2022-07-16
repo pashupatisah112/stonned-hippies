@@ -1,9 +1,9 @@
 <template>
-    <div style="background-color:black" class="mt-n16">
+    <div style="background-color:black">
         <v-container>
             <v-row justify="center">
                 <v-col align="center" cols="12" lg="8" md="10">
-                    <p class="text-h4">Don't Miss Out, Stay Updated</p>
+                    <p class="text-h6 text-lg-h4">Don't Miss Out, Stay Updated</p>
                     <!-- <v-row no-gutters class="my-16">
                         <v-text-field rounded dense placeholder="Email Address" background-color="#05061C" solo flat class="mr-2"></v-text-field>
                         <v-btn rounded class="menu-btn">Subscribe</v-btn>

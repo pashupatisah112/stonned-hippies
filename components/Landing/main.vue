@@ -6,13 +6,11 @@
     <v-btn icon v-else @click="soundOn()" x-large class="vol-btn">
         <v-icon x-large>mdi-volume-mute</v-icon>
     </v-btn>
-    <v-card>
-        <video muted loop id="bgVideo" class="mt-n16">
-            <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
-            Your browser does not support HTML5 video.
-        </video>
-    </v-card>
-    <v-overlay :absolute="absolute" :value="overlay" :opacity="opacity" @click="playvid()">
+    <video muted loop id="bgVideo" class="mt-n16">
+        <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
+    <v-overlay v-if="overlay" :absolute="absolute" :value="overlay" :opacity="opacity" @click="playvid()">
         <v-card max-width="500" style="padding:50px" color="transparent" flat>
             <v-col align="right">
                 <v-img :src="require('~/assets/images/Static-text.png')">
@@ -38,11 +36,8 @@ export default {
             playing: false
         };
     },
-    computed: {
-        
-    },
     methods: {
-getHeight() {
+        getHeight() {
             switch (this.$vuetify.breakpoint.name) {
                 case 'md':
                 case 'lg':
@@ -57,13 +52,11 @@ getHeight() {
             this.playing = true
         },
         soundOn() {
-            console.log('ok')
             var vid = document.getElementById("bgVideo");
             vid.muted = false
             this.playing = true
         },
         soundOff() {
-            console.log('ok')
             var vid = document.getElementById("bgVideo");
             vid.muted = true
             this.playing = false
