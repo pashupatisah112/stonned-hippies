@@ -17,7 +17,7 @@
                 <v-btn class="menu-btn">Connect Wallet</v-btn> -->
                 </v-col>
                 <v-col cols="12" lg="6" md="6" align="center">
-                    <v-img :src="require('~/assets/images/story-2.png')" max-width="300"></v-img>
+                    <v-img :src="require('~/assets/images/bob-marley.png')" max-width="300" class="rounded-circle"></v-img>
                 </v-col>
             </v-row>
         </v-container>
