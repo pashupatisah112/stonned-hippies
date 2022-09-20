@@ -18,7 +18,7 @@ Almost six decades down the line, these last remaining hippies from that era hav
                 <v-btn class="menu-btn">Connect Wallet</v-btn> -->
                 </v-col>
                 <v-col cols="12" lg="6" md="6" align="center">
-                    <v-img :src="require('~/assets/images/bob-marley.png')" max-width="300" class="rounded-circle mt-lg-16 mt-md-8"></v-img>
+                    <v-img :src="require('~/assets/images/story-gif.gif')" max-width="300" class="rounded-circle mt-lg-16 mt-md-8"></v-img>
                 </v-col>
             </v-row>
         </v-container>
