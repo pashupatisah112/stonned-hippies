@@ -17,8 +17,8 @@ Almost six decades down the line, these last remaining hippies from that era hav
                 </p>
                 <v-btn class="menu-btn">Connect Wallet</v-btn> -->
                 </v-col>
-                <v-col cols="12" lg="6" md="6" align="center">
-                    <v-img :src="require('~/assets/images/story-gif.gif')" max-width="300" class="rounded-circle mt-lg-16 mt-md-8"></v-img>
+                <v-col cols="12" lg="6" md="6" align="center" class="py-12">
+                    <v-img :src="require('~/assets/images/story-gif.gif')" max-width="300" class="mt-lg-16 mt-md-8"></v-img>
                 </v-col>
             </v-row>
         </v-container>
