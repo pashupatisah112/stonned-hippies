@@ -1,5 +1,5 @@
 <template>
-<div>
+<div>0
     <v-btn icon v-if="playing" @click="soundOff()" x-large class="vol-btn">
         <v-icon x-large>mdi-volume-high</v-icon>
     </v-btn>

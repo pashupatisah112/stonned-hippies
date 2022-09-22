@@ -1,0 +1,73 @@
+<template>
+    <div class="mt-16 dark">
+        <v-img class="shippie_img" :src="require('~/assets/images/story.png')" :height="getHeight('adjust')">
+            <v-container>
+                <v-row class="py-16">
+                    <v-col cols="9" lg="8" md="6" class="my-lg-16 py-lg-16 px-lg-16">
+                        <p class="text-md-h4 text-h5 font-weight-bold mb-4">Shippie Expedition</p>
+                        <p class=" mb-8">Service that allows to verify users and to prevent fraud. it is based on
+                            blockchain technology as a tool for protecting and validating personal data
+                            of internet users.</p>
+                        <ReusableGradientButton ButtonText="Connect Wallet" />
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-img>
+        <div class="pa-16">
+            <v-container>
+                <v-row justify="center">
+                    <v-col cols="12" class="text-center">
+                        <p class="text-h4 text-bold">Explore</p>
+                    </v-col>
+                </v-row>
+                <v-row justify="space-around">
+                    <div v-for="(item, i) in explore" :key="i">
+                        <GalleryExploreCard :galleryId="item.id" :title="item.gallery_name" :image="item.image" />
+                    </div>
+                </v-row>
+            </v-container>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            explore: [
+                {
+                    id: '1',
+                    gallery_name: 'abc',
+                    image: require('~/assets/images/2.png'),
+                },
+                {
+                    id: '2',
+                    gallery_name: 'abcd',
+                    image: require('~/assets/images/3.png'),
+                },
+                {
+                    id: '3',
+                    gallery_name: 'abcde',
+                    image: require('~/assets/images/1.png'),
+                }
+            ]
+        }
+    },
+    methods: {
+        getHeight(value) {
+            // if (value == 'adjust') {
+            //     return window.innerHeight - 60
+
+            // } else {
+            //     return window.innerHeight
+            // }
+        }
+    }
+}
+</script>
+
+<style lang="css">
+.shippie_img .v-image__image {
+    opacity: 0.6;
+}
+</style>
