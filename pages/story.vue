@@ -35,7 +35,8 @@
                 </v-row>
             </v-container>
         </v-card> -->
-        <v-card flat color="background" style="border-radius: 0 !important;">
+        <v-card flat color="background"
+            style="border-radius: 0 !important; background: linear-gradient(180deg, #64671A 30.6%, #608A5A 94.77%);">
             <v-container class="px-8 px-md-0 py-16">
                 <v-row>
                     <v-col cols="12" sm="6">
@@ -80,7 +81,7 @@
                 </div>
             </v-container>
         </v-card>
-        <v-card flat color="mistyRose" style="margin-bottom:-1px; border-radius: 0 !important;">
+        <v-card flat color="mistyRose" style="margin-bottom:-1px; border-radius: 0 !important; ">
             <v-container class="px-8 px-md-0 py-16" style="color: #000;">
                 <v-row>
                     <v-col cols="12" sm="6">
@@ -107,7 +108,7 @@
                 </v-row>
             </v-container>
         </v-card>
-        <v-card flat color="background">
+        <v-card flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
             <v-img :src="require('~/assets/images/curvey-background.svg')" style="margin-top:-1px; border-radius: 0;">
             </v-img>
             <v-container class="pa-16">

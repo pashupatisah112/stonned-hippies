@@ -13,9 +13,9 @@
                 </v-row>
             </v-container>
         </v-img>
-        <div class="pa-16">
+        <div class="pa-16" style="background: linear-gradient(180deg, #7D8662 0%, #94958E 100%);">
             <v-container>
-                <v-row justify="center">
+                <v-row justify="center" class="my-4">
                     <v-col cols="12" class="text-center">
                         <p class="text-h4 text-bold">Explore</p>
                     </v-col>
@@ -24,6 +24,9 @@
                     <div v-for="(item, i) in explore" :key="i">
                         <GalleryExploreCard :galleryId="item.id" :title="item.gallery_name" :image="item.image" />
                     </div>
+                </v-row>
+                <v-row class="my-8" justify="center">
+                    <DialogShippieApprove />
                 </v-row>
             </v-container>
         </div>

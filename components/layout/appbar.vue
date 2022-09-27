@@ -1,8 +1,9 @@
 <template>
     <div>
-        <v-app-bar color="transparent" flat absolute>
+        <v-app-bar class="header" color="transparent" flat absolute
+            style="height:100px; background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%);">
             <v-container class="d-flex align-center">
-                <div class="logo ma-2" max-width="160" style="max-width:120px;">
+                <div class="logo">
                     <v-img :src="require('~/assets/images/logo.png')" style="max-width:60px;"></v-img>
                 </div>
                 <v-spacer></v-spacer>
@@ -22,7 +23,7 @@
                     <v-btn text @click="$store.commit('utility/changeRoute','/shippieExpediation')">
                         Shippie Expediation
                     </v-btn>
-                    <ReusableGradientButton ButtonText="Connect Wallet" />
+                    <ReusableGradientButton class="ml-3" ButtonText="Connect Wallet" />
                 </div>
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-lg-and-up"></v-app-bar-nav-icon>
             </v-container>
@@ -72,3 +73,10 @@ export default {
     },
 }
 </script>
+
+<style lang="css">
+.header .v-toolbar__content {
+    height: auto !important;
+    margin-top: 12px;
+}
+</style>
