@@ -1,5 +1,5 @@
 <template>
-    <div id="story" class="mt-16">
+    <div id="story">
         <!-- <v-img :src="require('~/assets/images/story.png')" :height="getHeight('adjust')"></v-img> -->
         <!-- <v-card :height="getHeight('fix')" flat color="background">
             <v-container class="pa-lg-16">
@@ -71,9 +71,13 @@
                         <p class="text-h4">Stories</p>
                     </v-row>
                     <v-row class="justify-space-around mb-4">
-                        <div v-for="(item, i) in nfts" :key="i">
-                            <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image" />
-                        </div>
+                        <client-only>
+                            <!-- <VueSlickCarousel v-bind="slickSetting"> -->
+                            <div v-for="(item, i) in nfts" :key="i">
+                                <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image" />
+                            </div>
+                            <!-- </VueSlickCarousel> -->
+                        </client-only>
                     </v-row>
                     <v-row justify="center">
                         <ReusableBorderButton @click="$router.push('/stories')" ButtonText="View all" />
@@ -81,7 +85,7 @@
                 </div>
             </v-container>
         </v-card>
-        <v-card flat color="mistyRose" style="margin-bottom:-1px; border-radius: 0 !important; ">
+        <v-card flat color="mistyRose" style="margin-bottom:-1px; border-radius: 0 !important; z-index: ; ">
             <v-container class="px-8 px-md-3 py-16" style="color: #000;">
                 <v-row>
                     <v-col cols="12" sm="6">
@@ -102,7 +106,7 @@
                         <v-spacer></v-spacer>
                     </v-col>
                     <v-col cols="12" sm="4">
-                        <v-card class="pa-4 rounded-lg" max-width="300"
+                        <v-card class="pa-4 rounded-lg mx-auto" max-width="300"
                             style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(54, 49, 49, 0.231) 100%); backdrop-filter: blur(10px);">
                             <v-img class="rounded-lg" :src="require('~/assets/images/2.png')">
                             </v-img>
@@ -112,42 +116,80 @@
             </v-container>
         </v-card>
         <v-card flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
-            <v-img :src="require('~/assets/images/curvey-background.svg')" style="margin-top:-1px; border-radius: 0;">
+            <v-img :src="require('~/assets/images/curve.png')" style="margin-top:-1px; border-radius: 0;">
             </v-img>
             <v-container id="roadMap" class="pa-16">
                 <v-row justify="center">
                     <p class="title-roadMap text-h4 pb-1">Road Map</p>
                 </v-row>
-                <v-row justify="center">
-                    <v-col cols="12" lg="7" md="6" align="center">
-                        <v-timeline>
+                <v-row justify="space-between">
+                    <v-col cols="12" md="9" lg="7" align="center">
+                        <v-timeline class="d-block d-sm-none">
                             <v-timeline-item v-for="(item, i) in roadmap" :key="i" class="my-16" small>
                                 <template v-slot:opposite>
                                     <div v-for="(des,j) in item.events" :key="j" class="caption ">
-                                        <!-- <v-icon color="green" small class="mr-2">mdi-check-circle</v-icon> -->
+                                        <v-icon color="green" small class="mr-2">mdi-check-circle</v-icon>
                                         {{des.title}}
                                     </div>
                                 </template>
                                 <span v-text="item.date" class="text-right"></span>
                             </v-timeline-item>
                         </v-timeline>
-
+                        <RoadmapTimeLine class="d-none d-sm-block" />
                     </v-col>
-                    <v-col cols="12" lg="4" md="6" align="center">
+                    <v-col cols="12" md="3" lg="5" align="center">
                         <v-img :src="require('~/assets/images/roadmap-2.png')" class="mt-16" max-width="300">
                         </v-img>
                     </v-col>
                 </v-row>
-                <div class="wave"></div>
             </v-container>
         </v-card>
     </div>
 </template>
 
 <script>
+
 export default {
     data() {
         return {
+            slickSetting: {
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                rows: 3,
+                responsive: [
+                    {
+                        breakpoint: 1264,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: false,
+                            arrows: true,
+                        },
+                    },
+                    {
+                        breakpoint: 960,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            initialSlide: 2,
+                            arrows: true,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true,
+                        },
+                    },
+                ],
+            },
             nfts: [
                 {
                     id: '1',
@@ -221,33 +263,6 @@ export default {
 </script>
 
 <style>
-.wave {
-    width: 800px;
-    height: 200px;
-    position: relative;
-}
-
-.wave:after {
-    content: '';
-    width: 50%;
-    position: absolute;
-    height: 200px;
-    display: block;
-    border-bottom: 19px solid black;
-    border-radius: 50%;
-    left: 50%;
-}
-
-.wave:before {
-    content: '';
-    width: 50%;
-    position: absolute;
-    height: 200px;
-    display: block;
-    border-top: 19px solid black;
-    border-radius: 50%;
-}
-
 .image-shadow .v-image__image {
     -moz-box-shadow: 0px 6px 5px #51612E;
     -webkit-box-shadow: 0px 6px 5px #51612E;

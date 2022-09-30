@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-16">
+    <div>
         <v-img class="shippie_img" :src="require('~/assets/images/story.png')" :height="getHeight('adjust')">
             <v-container>
                 <v-row class="py-16">
@@ -112,7 +112,6 @@ export default {
         },
         scrollTo() {
             document.getElementById("section-explore").scrollIntoView()
-            // behaviour: 'smooth'
         }
     }
 }

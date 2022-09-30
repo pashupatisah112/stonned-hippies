@@ -1,8 +1,8 @@
 <template>
-    <div class="mt-16 pt-16" style="background: linear-gradient(180deg, #64671A 0%, #608A5A 94.77%);">
+    <div class=" pt-16" style="background: linear-gradient(180deg, #64671A 0%, #608A5A 94.77%);">
         <v-container>
             <v-row>
-                <v-breadcrumbs :items="items" style="color:white">
+                <v-breadcrumbs :items="items" style="color:white" dark>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
                     </template>
@@ -32,7 +32,7 @@ export default {
                 {
                     text: 'Our Story',
                     disabled: false,
-                    href: '../story',
+                    href: '/story',
                 },
                 {
                     text: 'Stories',
@@ -102,5 +102,7 @@ export default {
 </script>
 
 <style lang="css">
-
+.v-application a {
+    color: #FFF;
+}
 </style>

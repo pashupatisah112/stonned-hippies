@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-16">
+    <div>
         <!-- <v-img :src="require('~/assets/images/Background3.png')">
             <v-row class="text-background text-animation">
                 <v-col class="text-center text-block">
@@ -14,16 +14,16 @@
                 </v-col>
             </v-row>
         </v-img> -->
-
-
-        <v-container class="pt-8">
-            <v-btn icon v-if="playing" @click="soundOff()" x-large class="vol-btn">
-                <v-icon x-large>mdi-volume-high</v-icon>
-            </v-btn>
-            <v-btn icon v-else @click="soundOn()" x-large class="vol-btn">
-                <v-icon x-large>mdi-volume-mute</v-icon>
-            </v-btn>
-        </v-container>
+        <v-row>
+            <v-col class="">
+                <v-btn icon v-if="playing" @click="soundOff()" x-large class="vol-btn">
+                    <v-icon x-large>mdi-volume-high</v-icon>
+                </v-btn>
+                <v-btn icon v-else @click="soundOn()" x-large class="vol-btn">
+                    <v-icon x-large>mdi-volume-mute</v-icon>
+                </v-btn>
+            </v-col>
+        </v-row>
         <video muted loop id="bgVideo" class="mt-n16">
             <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
             Your browser does not support HTML5 video.
@@ -38,6 +38,7 @@
                     </v-img>
                     <v-img :src="require('~/assets/images/Link.png')" @click="playvid()" class="mt-2 mx-auto link"
                         max-width="300"></v-img>
+
                 </v-col>
             </v-card>
         </v-overlay>
@@ -124,44 +125,4 @@ export default {
 .vol-btn {
     z-index: 1;
 }
-
-/* .text-background {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    right: 0;
-}
-
-.animate {
-    animation: bottom-to-middle 3s ease-in-out;
-}
-
-@keyframes bottom-to-middle {
-    0% {
-        transform: translateY(100%);
-        opacity: 0.2;
-    }
-
-    33% {
-        transform: translateY(83%);
-        opacity: 0.5;
-    }
-
-    66% {
-        transform: translateY(66%);
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translateY(50%);
-        opacity: 1;
-    }
-}
-
-.foreground {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
 </style>

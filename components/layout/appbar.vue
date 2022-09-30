@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-app-bar class="header" color="transparent" flat absolute>
+        <v-app-bar :class="header()" color="transparent" flat absolute>
             <v-container class="px-1 d-flex align-center">
                 <div class="logo">
                     <v-img @click="$store.commit('utility/changeRoute','/')" :src="require('~/assets/images/logo.png')"
@@ -26,7 +26,7 @@
                     <!-- <v-btn text @click="$store.commit('utility/changeRoute','/roadmap')">
                         Roadmap
                     </v-btn> -->
-                    <v-btn text @click="scrollTo">
+                    <v-btn text @click="$router.push('/story#roadMap')">
                         Roadmap
                     </v-btn>
 
@@ -82,8 +82,11 @@ export default {
         }
     },
     methods: {
-        scrollTo() {
-            document.getElementById("roadMap").scrollIntoView()
+        header() {
+            console.log(this.$route)
+            if (this.$route.name != 'index') {
+                return 'header';
+            }
         }
     }
 }
@@ -93,6 +96,7 @@ export default {
 .header {
     background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%);
     height: 100px !important;
+    position: relative !important;
 }
 
 .header .v-toolbar__content {
