@@ -1,25 +1,35 @@
 <template>
     <div>
-        <v-app-bar class="header" color="transparent" flat absolute
-            style="height:100px; background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%);">
-            <v-container class="d-flex align-center">
+        <v-app-bar class="header" color="transparent" flat absolute>
+            <v-container class="px-1 d-flex align-center">
                 <div class="logo">
-                    <v-img :src="require('~/assets/images/logo.png')" style="max-width:60px;"></v-img>
+                    <v-img @click="$store.commit('utility/changeRoute','/')" :src="require('~/assets/images/logo.png')"
+                        style="max-width:60px; cursor: pointer;"></v-img>
                 </div>
                 <v-spacer></v-spacer>
                 <div class="hidden-md-and-down">
                     <v-btn text @click="$store.commit('utility/changeRoute','/')">
                         Home
                     </v-btn>
-                    <v-btn text @click="$store.commit('utility/changeRoute','/story')">
-                        Our Story
-                    </v-btn>
+                    <v-menu open-on-hover bottom offset-y>
+                        <template v-slot:activator="{on, attrs}">
+                            <v-btn v-bing="attrs" v-on="on" text @click="$store.commit('utility/changeRoute','/story')">
+                                Our Story
+                            </v-btn>
+                        </template>
+                        <v-btn text @click="$store.commit('utility/changeRoute','/stories')" style="width:100%;">Stories
+                        </v-btn>
+                    </v-menu>
                     <!-- <v-btn text @click="goTo('#collection')">
                 Collection
             </v-btn> -->
-                    <v-btn text @click="$store.commit('utility/changeRoute','/roadmap')">
+                    <!-- <v-btn text @click="$store.commit('utility/changeRoute','/roadmap')">
+                        Roadmap
+                    </v-btn> -->
+                    <v-btn text @click="scrollTo">
                         Roadmap
                     </v-btn>
+
                     <v-btn text @click="$store.commit('utility/changeRoute','/shippieExpediation')">
                         Shippie Expediation
                     </v-btn>
@@ -71,10 +81,20 @@ export default {
             ]
         }
     },
+    methods: {
+        scrollTo() {
+            document.getElementById("roadMap").scrollIntoView()
+        }
+    }
 }
 </script>
 
 <style lang="css">
+.header {
+    background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%);
+    height: 100px !important;
+}
+
 .header .v-toolbar__content {
     height: auto !important;
     margin-top: 12px;

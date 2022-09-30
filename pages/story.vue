@@ -37,7 +37,7 @@
         </v-card> -->
         <v-card flat color="background"
             style="border-radius: 0 !important; background: linear-gradient(180deg, #64671A 30.6%, #608A5A 94.77%);">
-            <v-container class="px-8 px-md-0 py-16">
+            <v-container class="px-8 px-md-3 py-16">
                 <v-row>
                     <v-col cols="12" sm="6">
                         <v-row>
@@ -67,22 +67,22 @@
                     </v-col>
                 </v-row>
                 <div class="pt-16">
-                    <v-row justify="center">
+                    <v-row justify="center" class="mb-4">
                         <p class="text-h4">Stories</p>
                     </v-row>
-                    <v-row class="justify-space-around mb-8">
+                    <v-row class="justify-space-around mb-4">
                         <div v-for="(item, i) in nfts" :key="i">
                             <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image" />
                         </div>
                     </v-row>
                     <v-row justify="center">
-                        <ReusableBorderButton ButtonText="View all" />
+                        <ReusableBorderButton @click="$router.push('/stories')" ButtonText="View all" />
                     </v-row>
                 </div>
             </v-container>
         </v-card>
         <v-card flat color="mistyRose" style="margin-bottom:-1px; border-radius: 0 !important; ">
-            <v-container class="px-8 px-md-0 py-16" style="color: #000;">
+            <v-container class="px-8 px-md-3 py-16" style="color: #000;">
                 <v-row>
                     <v-col cols="12" sm="6">
                         <v-row class="mb-6">
@@ -102,8 +102,11 @@
                         <v-spacer></v-spacer>
                     </v-col>
                     <v-col cols="12" sm="4">
-                        <v-img class="rounded-lg" max-width="300" :src="require('~/assets/images/2.png')">
-                        </v-img>
+                        <v-card class="pa-4 rounded-lg" max-width="300"
+                            style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(54, 49, 49, 0.231) 100%); backdrop-filter: blur(10px);">
+                            <v-img class="rounded-lg" :src="require('~/assets/images/2.png')">
+                            </v-img>
+                        </v-card>
                     </v-col>
                 </v-row>
             </v-container>
@@ -111,7 +114,7 @@
         <v-card flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
             <v-img :src="require('~/assets/images/curvey-background.svg')" style="margin-top:-1px; border-radius: 0;">
             </v-img>
-            <v-container class="pa-16">
+            <v-container id="roadMap" class="pa-16">
                 <v-row justify="center">
                     <p class="title-roadMap text-h4 pb-1">Road Map</p>
                 </v-row>
@@ -135,6 +138,7 @@
                         </v-img>
                     </v-col>
                 </v-row>
+                <div class="wave"></div>
             </v-container>
         </v-card>
     </div>
@@ -217,6 +221,33 @@ export default {
 </script>
 
 <style>
+.wave {
+    width: 800px;
+    height: 200px;
+    position: relative;
+}
+
+.wave:after {
+    content: '';
+    width: 50%;
+    position: absolute;
+    height: 200px;
+    display: block;
+    border-bottom: 19px solid black;
+    border-radius: 50%;
+    left: 50%;
+}
+
+.wave:before {
+    content: '';
+    width: 50%;
+    position: absolute;
+    height: 200px;
+    display: block;
+    border-top: 19px solid black;
+    border-radius: 50%;
+}
+
 .image-shadow .v-image__image {
     -moz-box-shadow: 0px 6px 5px #51612E;
     -webkit-box-shadow: 0px 6px 5px #51612E;

@@ -2,7 +2,8 @@
     <div>
         <v-card color="transparent" flat class="pa-5  rounded-lg">
             <!-- @click="$router.push({name:'story-id',params:{id:galleryId}})" -->
-            <div class="outer-card px-8 pt-8 pb-4" color="greenGray" style="background: #8A9D72;">
+            <div class="outer-card px-8 pt-8 pb-4 mb-4" color="greenGray"
+                style="background: #8A9D72; max-width: 300px;">
                 <div class="inner-card">
                     <v-img :src="image" :lazy-src="image" class="mx-auto mb-6 rounded-lg" width="220" height="220">
                         <template v-slot:placeholder>
@@ -16,6 +17,8 @@
                         style="background: #A6B2A3; box-shadow:inset 0px 6px 5px 0px #808c7b;">
                         {{title.slice(0,20)}}<span v-if="title.length>20">..</span>
                     </v-card-subtitle>
+                    <v-card-text class="mt-4 pa-0">{{text}}</v-card-text>
+                    <!-- <v-card-text v-else></v-card-text> -->
                 </div>
             </div>
         </v-card>
@@ -23,7 +26,14 @@
 </template>
 
 <script>
+import { title } from 'process';
+
 export default {
+    data() {
+        return {
+            showText: false
+        }
+    },
     props: {
         galleryId: {
             type: String,
@@ -36,6 +46,9 @@ export default {
         image: {
             type: String,
             required: true
+        },
+        text: {
+            type: String,
         }
     },
 }

@@ -2,11 +2,11 @@
     <div>
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="560">
-                <template v-slot:activator="{ on, attrs }">
+                <!-- <template v-slot:activator="{ on, attrs }">
                     <v-btn color="primary" v-bind="attrs" v-on="on">
                         Open Dialog
                     </v-btn>
-                </template>
+                </template> -->
                 <v-card class="py-8" color="#FFF" style="color:#000; position: relative; overflow: hidden;">
                     <v-row class="px-6">
                         <v-col cols="12" sm="9">

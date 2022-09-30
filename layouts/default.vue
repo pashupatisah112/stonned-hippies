@@ -1,5 +1,5 @@
 <template>
-    <v-app dark style="position: relative; overflow: hidden;">
+    <v-app dark style="position: relative; overflow: hidden; ">
         <client-only>
             <LayoutAppbar />
             <v-main>
