@@ -1,7 +1,6 @@
 <template>
     <div>
-        <v-card color="transparent" flat class="pa-5  rounded-lg">
-            <!-- @click="$router.push({name:'story-id',params:{id:galleryId}})" -->
+        <v-card color="transparent" flat class="pa-5 rounded-lg">
             <div class="outer-card px-8 pt-8 pb-4 mb-4" color="greenGray"
                 style="background: #8A9D72; max-width: 300px;">
                 <div class="inner-card">
@@ -17,9 +16,7 @@
                         style="background: #A6B2A3; box-shadow:inset 0px 6px 5px 0px #808c7b;">
                         {{title.slice(0,20)}}<span v-if="title.length>20">..</span>
                     </v-card-subtitle>
-                    <v-card-text class="mt-4 pa-0">{{text}}</v-card-text>
-                    <!-- <v-card-text v-else></v-card-text> -->
-                    <!-- <v-card-text v-else></v-card-text> -->
+                    <v-card-text v-if="text.length > 0" class="mt-4 pa-0 text-card">{{text}}</v-card-text>
                 </div>
             </div>
         </v-card>
@@ -56,5 +53,7 @@ export default {
 </script>
 
 <style>
-
+.text-card {
+    min-height: 200px;
+}
 </style>

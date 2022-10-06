@@ -83,7 +83,7 @@ export default {
     },
     methods: {
         header() {
-            console.log(this.$route)
+            // console.log(this.$route)
             if (this.$route.name != 'index') {
                 return 'header';
             }

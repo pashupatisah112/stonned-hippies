@@ -26,7 +26,7 @@
                         <RoadmapTimeLine class="d-none d-sm-block" />
                     </v-col>
                     <v-col cols="12" md="3" lg="5" align="center">
-                        <v-img :src="require('~/assets/images/roadmap-2.png')" class="mt-16" max-width="300">
+                        <v-img :src="require('~/assets/images/roadmap-2.png')" max-width="300">
                         </v-img>
                     </v-col>
                 </v-row>
@@ -154,18 +154,6 @@ export default {
     border-radius: 8px;
 }
 
-.title-story {
-    position: relative;
-}
-
-.title-story:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50%;
-    border-bottom: 3px solid #000
-}
 
 .title-roadMap {
     position: relative;
