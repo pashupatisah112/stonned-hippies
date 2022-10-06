@@ -4,7 +4,7 @@
         <LandingRealm />
         <!-- <LandingRoadMap /> -->
         <v-card flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
-            <v-img :src="require('~/assets/images/curve.png')" style="margin-top:-1px; border-radius: 0;">
+            <v-img :src="require('~/assets/images/Curve.png')" style="margin-top:-1px; border-radius: 0;">
             </v-img>
             <v-container id="roadMap" class="pa-16">
                 <v-row justify="center">
