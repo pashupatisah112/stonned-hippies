@@ -35,7 +35,7 @@
                     <v-row justify="center" class="mb-4">
                         <p class="text-h4">Stories</p>
                     </v-row>
-                    <v-row class="justify-space-between mb-4 pa-12">
+                    <v-row class="justify-center justify-md-space-between px-12  ">
                         <client-only>
                             <!-- <VueSlickCarousel v-bind="slickSetting"> -->
                             <div v-for="(item, i) in nfts" :key="i">

@@ -14,7 +14,7 @@
             <v-row justify="center">
                 <p>22 NFT Character Stories | Stoned Hippies Realm</p>
             </v-row>
-            <v-row class="justify-space-between mb-8 pa-12">
+            <v-row class="justify-center justify-md-space-between mb-8 pa-12">
                 <div v-for="(item, i) in nfts" :key="i">
                     <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image"
                         :text="item.text" />

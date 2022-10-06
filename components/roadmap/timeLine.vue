@@ -9,6 +9,16 @@
             <v-img class="curvey-line" :src="require('~/assets/images/curve-line.svg')" max-height="360"
                 max-width="145">
             </v-img>
+            <!-- <div class="test">
+                <div class="timeline-circle">
+                </div>
+                <v-img class="curvey-line" :src="require('~/assets/images/curve-line.svg')" max-height="360"
+                    max-width="145">
+                </v-img>
+                <v-img class="curvey-line curvey-line-hover" :src="require('~/assets/images/curve-line-hover.png')"
+                    max-height="360" max-width="145">
+                </v-img>
+            </div> -->
             <div class="timeline-text">
                 <p class="mb-0">January - March 2022</p>
             </div>
@@ -100,7 +110,17 @@ export default {
     border-radius: 50%;
     position: relative;
     z-index: 1;
+    transition: 0.3s ease-in-out;
 }
+
+/* .timeline-circle:hover {
+    border: 2px solid #51FF0D;
+}
+
+.test:hover .curvey-line-hover {
+    visibility: visible;
+    opacity: 1;
+} */
 
 .timeline-text {
     max-width: 160px;
@@ -114,6 +134,12 @@ export default {
     top: 65px;
     margin: 0 auto;
 }
+
+/* .curvey-line-hover {
+    visibility: none;
+    opacity: 0;
+    transition: .3s ease-in-out;
+} */
 
 .curvey-line-rotate {
     transform: scaleX(-1);
