@@ -1,35 +1,86 @@
 <template>
-<div id="story">
-    <v-card :height="getHeight()" flat color="transparent">
-        <v-container class="pa-16">
-            <v-row>
-                <v-col cols="12" lg="6" md="6">
-                    <div class="title-box">
-                        <p class="text-h4">OUR STORY</p>
-                    </div>
-                    <p class="text-uppercase para-text">
-                        During the late 1960s; the year of the magic bus, there were thousands of counterculture travelers who made their way to Afghanistan. The go-to-teahouse called the Sigis in Kabul was the haven for those who honored music and this is where these seven hippies met and instantly got connected through their love for music.
-                    </p>
-                    <!-- <p class="text-uppercase para-text">
-                    Almost six decades down the line, these last remaining hippies from that era have secretly built a community of stoned hippies rooted in their love for music. Having survived half a century long political wretch, the community has decided to recommence as the hippiedom legacy and to resurrect the solana blockchain with 2222 elusive inhabitants.
-                </p>
-                <v-btn class="menu-btn">Connect Wallet</v-btn> -->
-                </v-col>
-                <v-col cols="12" lg="6" md="6" align="center">
-                    <v-img :src="require('~/assets/images/Our story.png')" max-width="300"></v-img>
-                </v-col>
-            </v-row>
-        </v-container>
-    </v-card>
-</div>
+    <div id="story">
+        <v-card flat color="background"
+            style="border-radius: 0 !important; background: linear-gradient(180deg, #64671A 30.6%, #608A5A 94.77%);">
+            <v-container class="px-8 px-md-3 py-16">
+                <v-row>
+                    <v-col cols="12" sm="6">
+                        <v-row>
+                            <p class="text-h4">
+                                <span style="border-bottom:2px solid;">Our </span><span
+                                    style="color:#FFDD38;">Story</span>
+                            </p>
+                        </v-row>
+                        <v-row>
+                            <p class="para-text">
+                                During the late 1960s; the year of the magic bus, there were thousands of
+                                ounterculture
+                                travellers who made their way to afghanistan. The go-to-teahouse called the sigis in
+                                kabul was the haven for those who honored music and this is where the se seven
+                                hippies
+                                met and instantly got connected through their love for music.
+                            </p>
+                        </v-row>
+                    </v-col>
+                    <v-col cols="3" sm="2">
+                        <v-spacer></v-spacer>
+                    </v-col>
+                    <v-col cols="6" sm="4">
+                        <v-img class="image-shadow image-size" max-width="300"
+                            :src="require('~/assets/images/story-2.png')">
+                        </v-img>
+                    </v-col>
+                </v-row>
+                <div class="pt-16">
+                    <v-row justify="center" class="mb-4">
+                        <p class="text-h4">Stories</p>
+                    </v-row>
+                    <v-row class="justify-space-around mb-4">
+                        <client-only>
+                            <!-- <VueSlickCarousel v-bind="slickSetting"> -->
+                            <div v-for="(item, i) in nfts" :key="i">
+                                <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image" />
+                            </div>
+                            <!-- </VueSlickCarousel> -->
+                        </client-only>
+                    </v-row>
+                    <v-row justify="center">
+                        <ReusableBorderButton @click="$router.push('/stories')" ButtonText="View all" />
+                    </v-row>
+                </div>
+            </v-container>
+        </v-card>
+    </div>
 </template>
 <script>
 export default {
-    methods:{
-        getHeight(){
-            return window.innerHeight
+    data() {
+        return {
+            nfts: [
+                {
+                    id: '1',
+                    gallery_name: 'abc',
+                    image: require('~/assets/images/2.png'),
+                },
+                {
+                    id: '2',
+                    gallery_name: 'abcd',
+                    image: require('~/assets/images/3.png'),
+                },
+                {
+                    id: '3',
+                    gallery_name: 'abcde',
+                    image: require('~/assets/images/1.png'),
+                }
+            ],
         }
-    }
+    },
+
+    // methods: {
+    //     getHeight() {
+    //         return window.innerHeight
+    //     }
+    // }
 }
 </script>
 

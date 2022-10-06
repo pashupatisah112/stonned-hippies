@@ -17,8 +17,8 @@
                                 Our Story
                             </v-btn>
                         </template>
-                        <v-btn text @click="$store.commit('utility/changeRoute','/stories')" style="width:100%;">Stories
-                        </v-btn>
+                        <!-- <v-btn text @click="$store.commit('utility/changeRoute','/stories')" style="width:100%;">Stories
+                        </v-btn> -->
                     </v-menu>
                     <!-- <v-btn text @click="goTo('#collection')">
                 Collection
@@ -33,7 +33,7 @@
                     <v-btn text @click="$store.commit('utility/changeRoute','/shippieExpediation')">
                         Shippie Expediation
                     </v-btn>
-                    <ReusableGradientButton class="ml-3" ButtonText="Connect Wallet" />
+                    <!-- <ReusableGradientButton class="ml-3" ButtonText="Connect Wallet" /> -->
                 </div>
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-lg-and-up"></v-app-bar-nav-icon>
             </v-container>
@@ -76,7 +76,7 @@ export default {
             // },
             {
                 title: 'Roadmap',
-                link: '/roadmap'
+                link: '/story#roadMap'
             },
             ]
         }

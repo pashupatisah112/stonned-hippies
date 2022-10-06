@@ -19,6 +19,7 @@
                     </v-card-subtitle>
                     <v-card-text class="mt-4 pa-0">{{text}}</v-card-text>
                     <!-- <v-card-text v-else></v-card-text> -->
+                    <!-- <v-card-text v-else></v-card-text> -->
                 </div>
             </div>
         </v-card>

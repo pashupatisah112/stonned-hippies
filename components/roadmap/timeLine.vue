@@ -72,7 +72,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 160px;
+    margin-bottom: 170px;
 }
 
 .timeline-box {
