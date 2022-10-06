@@ -1,22 +1,22 @@
 version: '3.1'
 
 services:
-  stoned-hippies-stage:
-    container_name: -staginstonedg
-    hostname: stoned-staging
+  stoned-hippies-production:
+    container_name: production-stoned
+    hostname: stoned-production
     build:
       context: ./
       dockerfile: Dockerfile
       args:
         - NODE_ENV=development
         - IMG=16.17-alpine3.15
-        - LOCATION=stoned-staging
+        - LOCATION=stoned-production
     restart: always
     user: root:root
     env_file:
       - ./.env
     environment:
       - NODE_ENV=${NODE_ENV}
-      - COMPOSE_PROJECT_NAME=stoned-staging
+      - COMPOSE_PROJECT_NAME=stoned-production
     ports:
       - ${PORT}:${PORT}
