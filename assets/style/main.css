@@ -2,15 +2,31 @@
   font-family: "Psychedelia";
   src: url('~/assets/fonts/pure-psychedelia-font/psychedelia.ttf');
 }
-@font-face {
+/* @font-face {
   font-family: "Poppins";
   src: url('~/assets/fonts/poppins/Poppins-Regular.ttf');
+} */
+@font-face {
+  font-family: "kalam";
+  src: url('~/assets/fonts/Kalam/Kalam-Regular.ttf');
+}
+@font-face {
+  font-family: "kalam-bold";
+  src: url('~/assets/fonts/Kalam/Kalam-Bold.ttf');
+}
+/* @font-face {
+  font-family: "kalam";
+  src: url('~/assets/fonts/Roboto/Roboto-Regular.ttf');
+} */
+
+html {
+  scroll-behavior: smooth;
 }
 .v-btn {
   text-transform: capitalize;
 }
 .para-text {
-  font-family: Poppins;
+  font-family: "kalam";
   font-size: 18px;
   font-weight: 300;
   line-height: 30px;
@@ -48,11 +64,17 @@ background-color: #000229;
 .v-application .caption,.v-application .text-h6,
 .v-application .text-h5,.v-card,.v-list,
 .v-btn__content,.v-data-table,p,h5,small,.title,label,.body-2{
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'kalam' , sans-serif !important;
 }
-/* .text-h4,p{
-  color:  #827c13;
-} */
+
+.v-application .text-h1,
+.v-application .text-h2,
+.v-application .text-h3,
+.v-application .text-h4,
+.v-application .text-h5,
+.v-application .text-h6 {
+  font-family: 'kalam', sans-serif !important;
+}
 /* .v-application .text-h4,p{
   font-family: 'Psychedelia', sans-serif !important;
 
