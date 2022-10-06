@@ -22,7 +22,6 @@
 
                             </v-timeline-item>
                         </v-timeline>
-
                     </v-col>
                     <v-col cols="12" lg="4" md="6" align="center">
                         <v-img :src="require('~/assets/images/roadmap-2.png')" class="mt-16" max-width="300"></v-img>
