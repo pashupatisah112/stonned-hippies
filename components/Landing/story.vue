@@ -39,7 +39,8 @@
                         <client-only>
                             <!-- <VueSlickCarousel v-bind="slickSetting"> -->
                             <div v-for="(item, i) in nfts" :key="i">
-                                <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image" />
+                                <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image"
+                                    :text=item.text />
                             </div>
                             <!-- </VueSlickCarousel> -->
                         </client-only>
@@ -59,18 +60,24 @@ export default {
             nfts: [
                 {
                     id: '1',
-                    gallery_name: 'abc',
-                    image: require('~/assets/images/2.png'),
+                    gallery_name: 'Fernley',
+                    image: require('~/assets/images/nfts/fernley.png'),
+                    text: ''
+                    // text: 'I am Fernly. I like to hike when I am high. And by hiking, I don’t mean plain walking. I have to climb up and descend down and be in the woods.'
                 },
                 {
                     id: '2',
-                    gallery_name: 'abcd',
-                    image: require('~/assets/images/3.png'),
+                    gallery_name: 'Jadeend',
+                    image: require('~/assets/images/nfts/Jadeend.png'),
+                    text: ''
+                    // text: 'I have drinks stocked at home, in the shoe cabinet, under the bed, inside the junkbin, in my bag, pocket, everywhere literally. Despite that, I still have to go out and drink. The walls in my room confine me.'
                 },
                 {
                     id: '3',
-                    gallery_name: 'abcde',
-                    image: require('~/assets/images/1.png'),
+                    gallery_name: 'Pearsyd',
+                    image: require('~/assets/images/nfts/Pearsyd.png'),
+                    text: ''
+                    // text: ' I come with a warning! “Do not come near me” It is because my entire body especially my hair reeks of cheap alcohol and grass. but let me also tell you that these are not cheap alcohol that you smell off me.'
                 }
             ],
         }
