@@ -45,7 +45,7 @@ export default {
                 {
                     id: '1',
                     gallery_name: 'Fernley',
-                    image: require('~/assets/images/nfts/fernley.png'),
+                    image: require('~/assets/images/nfts/Fernley.png'),
                     text: 'I am Fernly. I like to hike when I am high. And by hiking, I don’t mean plain walking. I have to climb up and descend down and be in the woods.'
                 },
                 {
