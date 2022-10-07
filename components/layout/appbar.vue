@@ -78,6 +78,10 @@ export default {
                 title: 'Roadmap',
                 link: '/story#roadMap'
             },
+            {
+                title: 'Shippie Expediation',
+                link: '/ShippieExpediation'
+            }
             ]
         }
     },

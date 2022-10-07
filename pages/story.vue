@@ -3,10 +3,10 @@
         <LandingStory />
         <LandingRealm />
         <!-- <LandingRoadMap /> -->
-        <v-card flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
+        <v-card class="pb-8" flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
             <v-img :src="require('~/assets/images/Curve.png')" style="margin-top:-1px; border-radius: 0;">
             </v-img>
-            <v-container id="roadMap" class="pa-16">
+            <v-container id="roadMap" class="pa-6 pa-sm-16">
                 <v-row justify="center">
                     <p class="title-roadMap text-h4 pb-1">Road Map</p>
                 </v-row>
@@ -168,5 +168,17 @@ export default {
     width: 50%;
     margin: 0 auto;
     border-bottom: 2px solid #fff;
+}
+
+.caption .v-icon {
+    display: none;
+}
+
+.theme--dark.v-timeline .v-timeline-item__dot {
+    background: #0B1A50 !important;
+}
+
+.v-application .primary {
+    background-color: #500B28 !important;
 }
 </style>

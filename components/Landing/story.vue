@@ -22,10 +22,10 @@
                             </p>
                         </v-row>
                     </v-col>
-                    <v-col cols="3" sm="2">
+                    <v-col cols="2" sm="2">
                         <v-spacer></v-spacer>
                     </v-col>
-                    <v-col cols="6" sm="4">
+                    <v-col cols="8" sm="4">
                         <v-img class="image-shadow image-size" max-width="300"
                             :src="require('~/assets/images/story-2.png')">
                         </v-img>
