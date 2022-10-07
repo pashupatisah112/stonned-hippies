@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div id="roadmap">
         <v-card :height="getHeight()" flat color="transparent">
 
@@ -82,4 +82,4 @@ export default {
 .v-application .primary {
     background-color: white !important;
 }
-</style>
+</style> -->

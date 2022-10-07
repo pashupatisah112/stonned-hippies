@@ -4,13 +4,13 @@
             <v-row justify="center">
                 <v-col align="center" cols="12" lg="8" md="10">
                     <p class="text-h6 text-lg-h4">Don't Miss Out, Stay Updated</p>
-                    <v-row no-gutters class="mt-16 mb-8">
+                    <v-row no-gutters class="my-8 align-center">
                         <v-col cols="1" sm="2">
                             <v-spacer></v-spacer>
                         </v-col>
                         <v-col cols="6" sm="5">
                             <v-text-field rounded dense placeholder="Email Address" background-color="#333" solo flat
-                                class="mr-2"></v-text-field>
+                                class="mr-2 text-field"></v-text-field>
                         </v-col>
                         <v-col cols="4" sm="3">
                             <ReusableGradientButton ButtonText="Subscribe" />
@@ -19,11 +19,7 @@
                             <v-spacer></v-spacer>
                         </v-col>
                     </v-row>
-                    <small class="mb-10" style="opacity: 0.8">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Porttitor<br> rhoncus dolor purus non enim praesent
-                    </small>
-                    <v-row justify="center" no-gutters class="py-10">
+                    <v-row justify="center" no-gutters class="mb-8">
                         <v-icon small @click="
                           openLink(
                             'https://twitter.com/StonedHippies?t=EvLv7lx-XqFOU4agae2WAA&s=09'
@@ -51,9 +47,13 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
 .custom-placeholer-color input::placeholder {
     color: red !important;
     opacity: 1;
+}
+
+.text-field .v-text-field__details {
+    display: none;
 }
 </style>

@@ -1,24 +1,23 @@
 <template>
     <div class="timeline">
         <div class="timeline-list">
-            <v-img class="timeline-box" :src="require('~/assets/images/timeline-box.svg')" max-width="300">
+            <v-img class="timeline-box timeline-box-1" :src="require('~/assets/images/timeline-box.svg')"
+                max-width="300">
+                <p>Preparation, Assemble the Team, Investor Pitch Deck and Secure Seed funding</p>
+            </v-img>
+            <v-img class="timeline-box timeline-box-hover" :src="require('~/assets/images/timeline-box-hover.png')"
+                max-width="300">
                 <p>Preparation, Assemble the Team, Investor Pitch Deck and Secure Seed funding</p>
             </v-img>
             <div class="timeline-circle">
             </div>
-            <v-img class="curvey-line" :src="require('~/assets/images/curve-line.svg')" max-height="360"
+            <v-img class="curvey-line curvey-line-1" :src="require('~/assets/images/curve-line.svg')" max-height="360"
                 max-width="145">
             </v-img>
-            <!-- <div class="test">
-                <div class="timeline-circle">
-                </div>
-                <v-img class="curvey-line" :src="require('~/assets/images/curve-line.svg')" max-height="360"
-                    max-width="145">
-                </v-img>
-                <v-img class="curvey-line curvey-line-hover" :src="require('~/assets/images/curve-line-hover.png')"
-                    max-height="360" max-width="145">
-                </v-img>
-            </div> -->
+            <v-img class="curvey-line curvey-line-hover" :src="require('~/assets/images/curve-line-hover.png')"
+                max-height="360" max-width="145">
+            </v-img>
+            <!-- </div> -->
             <div class="timeline-text">
                 <p class="mb-0">January - March 2022</p>
             </div>
@@ -29,25 +28,41 @@
             </div>
             <div class="timeline-circle">
             </div>
-            <v-img class="curvey-line curvey-line-rotate" :src="require('~/assets/images/curve-line.svg')"
+            <v-img class="curvey-line curvey-line-1 curvey-line-rotate" :src="require('~/assets/images/curve-line.svg')"
                 max-height="360" max-width="145">
             </v-img>
-
-            <v-img class="timeline-box timeline-box-rotate" :src="require('~/assets/images/timeline-box.svg')"
-                max-width="300">
+            <v-img class="curvey-line curvey-line-hover curvey-line-rotate"
+                :src="require('~/assets/images/curve-line-hover.png')" max-height="360" max-width="145">
+            </v-img>
+            <v-img class="timeline-box timeline-box-1 timeline-box-rotate"
+                :src="require('~/assets/images/timeline-box.svg')" max-width="300">
+                <p>Community Platform Launch, Reveal of the Chronicle - Tale of the go-to-tea house "Sigis of Kabul",
+                    First NFT sneak peeks and AMA Campaigns</p>
+            </v-img>
+            <v-img class="timeline-box timeline-box-rotate timeline-box-rotate-hover"
+                :src="require('~/assets/images/timeline-box-hover.png')" max-width="300">
                 <p>Community Platform Launch, Reveal of the Chronicle - Tale of the go-to-tea house "Sigis of Kabul",
                     First NFT sneak peeks and AMA Campaigns</p>
             </v-img>
         </div>
         <div class="timeline-list">
-            <v-img class="timeline-box" :src="require('~/assets/images/timeline-box.svg')" max-width="300">
+            <v-img class="timeline-box timeline-box-1" :src="require('~/assets/images/timeline-box.svg')"
+                max-width="300">
+                <p>Publish Whitepaper, Strategic Partnership and Collaboration, Official Mint date Announcement,
+                    Showcase 2222 Stoned Hippies Gen-0 NFTs collection, Stoned Hippies DAO Setup</p>
+            </v-img>
+            <v-img class="timeline-box timeline-box-hover" :src="require('~/assets/images/timeline-box-hover.png')"
+                max-width="300">
                 <p>Publish Whitepaper, Strategic Partnership and Collaboration, Official Mint date Announcement,
                     Showcase 2222 Stoned Hippies Gen-0 NFTs collection, Stoned Hippies DAO Setup</p>
             </v-img>
             <div class="timeline-circle">
             </div>
-            <v-img class="curvey-line" :src="require('~/assets/images/curve-line.svg')" max-height="360"
+            <v-img class="curvey-line curvey-line-1" :src="require('~/assets/images/curve-line.svg')" max-height="360"
                 max-width="145">
+            </v-img>
+            <v-img class="curvey-line curvey-line-hover" :src="require('~/assets/images/curve-line-hover.png')"
+                max-height="360" max-width="145">
             </v-img>
             <div class="timeline-text">
                 <p class="mb-0">July - September 2022</p>
@@ -58,11 +73,15 @@
                 <p class="mb-0">October - December 2022</p>
             </div>
             <div class="timeline-circle">
-                <!-- <img class="curve-line-rotate" :src="require('~/assets/images/curve-line.svg')" /> -->
             </div>
 
-            <v-img class="timeline-box timeline-box-rotate" :src="require('~/assets/images/timeline-box.svg')"
-                max-width="300">
+            <v-img class="timeline-box timeline-box-1 timeline-box-rotate"
+                :src="require('~/assets/images/timeline-box.svg')" max-width="300">
+                <p>Mint and Secondary Market Listing, Tokenomics and Utilities, Stake to earn $SHR, Xmas Metaverse
+                    Launch Party</p>
+            </v-img>
+            <v-img class="timeline-box timeline-box-rotate timeline-box-rotate-hover"
+                :src="require('~/assets/images/timeline-box-hover.png')" max-width="300">
                 <p>Mint and Secondary Market Listing, Tokenomics and Utilities, Stake to earn $SHR, Xmas Metaverse
                     Launch Party</p>
             </v-img>
@@ -89,6 +108,8 @@ export default {
     display: flex;
     align-items: center;
     font-size: 12px;
+    transition: 0.3s ease-in-out;
+
 }
 
 .timeline-box-rotate .v-image__image {
@@ -113,14 +134,36 @@ export default {
     transition: 0.3s ease-in-out;
 }
 
-/* .timeline-circle:hover {
+.timeline-list:hover .curvey-line-hover,
+.timeline-list:hover .timeline-box-hover,
+.timeline-list:hover .timeline-box-rotate-hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timeline-list:hover .curvey-line-1,
+.timeline-list:hover .timeline-box-1 {
+    visibility: none;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.timeline-list:hover .timeline-circle {
     border: 2px solid #51FF0D;
 }
 
-.test:hover .curvey-line-hover {
-    visibility: visible;
-    opacity: 1;
-} */
+.timeline-box-hover {
+    position: absolute;
+    opacity: 0;
+    visibility: none;
+}
+
+.timeline-box-rotate-hover {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    visibility: none;
+}
 
 .timeline-text {
     max-width: 160px;
@@ -135,17 +178,13 @@ export default {
     margin: 0 auto;
 }
 
-/* .curvey-line-hover {
+.curvey-line-hover {
     visibility: none;
     opacity: 0;
     transition: .3s ease-in-out;
-} */
+}
 
 .curvey-line-rotate {
     transform: scaleX(-1);
-}
-
-.curvey-line .v-image__image {
-    /* transform: rotate(-10deg); */
 }
 </style>

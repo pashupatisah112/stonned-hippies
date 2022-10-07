@@ -26,7 +26,7 @@
                         <RoadmapTimeLine class="d-none d-sm-block" />
                     </v-col>
                     <v-col cols="12" md="3" lg="5" align="center">
-                        <v-img :src="require('~/assets/images/roadmap-2.png')" max-width="300">
+                        <v-img :src="require('~/assets/images/legendary-2-1.png')" max-width="300">
                         </v-img>
                     </v-col>
                 </v-row>
