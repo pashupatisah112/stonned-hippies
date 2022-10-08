@@ -68,7 +68,7 @@
                 <p class="mb-0">July - September 2022</p>
             </div>
         </div>
-        <div class="timeline-list ">
+        <div class="timeline-list mb-8">
             <div class="timeline-text">
                 <p class="mb-0">October - December 2022</p>
             </div>

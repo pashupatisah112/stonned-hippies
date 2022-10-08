@@ -8,11 +8,11 @@
                         <v-col cols="1" sm="2">
                             <v-spacer></v-spacer>
                         </v-col>
-                        <v-col cols="6" sm="5">
+                        <v-col cols="7" sm="5">
                             <v-text-field rounded dense placeholder="Email Address" background-color="#333" solo flat
                                 class="mr-2 text-field"></v-text-field>
                         </v-col>
-                        <v-col cols="4" sm="3">
+                        <v-col cols="3" sm="3">
                             <ReusableGradientButton ButtonText="Subscribe" />
                         </v-col>
                         <v-col cols="1" sm="2">
