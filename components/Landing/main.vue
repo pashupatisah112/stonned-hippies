@@ -29,7 +29,7 @@
                 </v-col>
             </v-card>
         </v-overlay>
-        <ReusableMintButton ButtonText="Mint" class="mint-btn" @click="mint()" />
+        <ReusableMintButton ButtonText="Go To Mint" class="mint-btn" @click="mint()" />
 
 
     </div>
