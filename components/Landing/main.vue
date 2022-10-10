@@ -10,7 +10,6 @@
                 </v-btn>
             </v-col>
         </v-row>
-        <iframe src="https://staging-mint.stonedhippies.io" class="iframe" width="400" height="250"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" ></iframe>
 
         <video muted loop id="bgVideo" class="mt-n16">
             <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
@@ -30,7 +29,7 @@
                 </v-col>
             </v-card>
         </v-overlay>
-        <ReusableMintButton />
+        <ReusableMintButton ButtonText="Mint" class="mint-btn" @click="mint()" />
 
 
     </div>
@@ -54,6 +53,9 @@ export default {
                 case 'lg':
                     return window.innerHeight - 60;
             }
+        },
+        mint(){
+          window.location.href='https://staging-mint.stonedhippies.io'
         },
         playvid() {
             var vid = document.getElementById("bgVideo");
@@ -112,10 +114,10 @@ export default {
 .vol-btn {
     z-index: 1;
 }
-.iframe{
+.mint-btn{
     position: absolute;
-    top:20%;
+    top:50%;
     left:40%;
-    z-index: 5000;
+    z-index: 1;
 }
 </style>
