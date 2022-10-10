@@ -25,7 +25,7 @@
                     <v-col cols="12" sm="4">
                         <v-card class="pa-4 rounded-lg mx-auto" max-width="300"
                             style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(54, 49, 49, 0.231) 100%); backdrop-filter: blur(10px);">
-                            <v-img class="rounded-lg" :src="require('~/assets/images/4156.png')">
+                            <v-img class="rounded-lg" :src="require('~/assets/images/nfts/Appleton.png')">
                             </v-img>
                         </v-card>
                     </v-col>
