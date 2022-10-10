@@ -10,11 +10,14 @@
                 </v-btn>
             </v-col>
         </v-row>
+        <iframe src="https://staging-mint.stonedhippies.io" class="iframe" width="400" height="250"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" ></iframe>
+
         <video muted loop id="bgVideo" class="mt-n16">
             <source :src="require('~/assets/videos/main-back.mp4')" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
         <v-overlay v-if="overlay" :absolute="absolute" :value="overlay" :opacity="opacity" @click="playvid()">
+
             <v-card max-width="500" style="padding:50px;" color="transparent" flat>
                 <v-col align="right" class="pa-8 pa-sm-0">
                     <v-img :src="require('~/assets/images/Static-text.png')">
@@ -27,6 +30,8 @@
                 </v-col>
             </v-card>
         </v-overlay>
+        <ReusableMintButton />
+
 
     </div>
 </template>
@@ -38,7 +43,8 @@ export default {
             absolute: true,
             overlay: true,
             opacity: 1,
-            playing: false
+            playing: false,
+            minturl:process.env.MINT_URL
         };
     },
     methods: {
@@ -105,5 +111,11 @@ export default {
 
 .vol-btn {
     z-index: 1;
+}
+.iframe{
+    position: absolute;
+    top:20%;
+    left:40%;
+    z-index: 5000;
 }
 </style>
