@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div style="margin-top:100px;">
+        <!-- <MintsMint /> -->
         <v-img class="shippie_img" :src="require('~/assets/images/story.png')"
             style="position:relative; min-height: 600px;">
             <!-- <v-container>
@@ -31,8 +32,8 @@
                             class="text-yellow">222</span> Stoned
                         hippies
                         holders, this Shippie Expedition is only
-                        about to get more exhilarating <span class="text-yellow">insert sunflower, bus, smoke, music
-                            emoji</span></p>
+                        about to get more exhilarating <span style="font-size:30px;">🌻, 🚌, 🚬,
+                            🎸</span></p>
                 </v-row>
             </v-container>
         </v-img>
@@ -98,7 +99,7 @@ export default {
 
 <style lang="css">
 .shippie_img .v-image__image {
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 .scroll-down {
