@@ -2,10 +2,10 @@
     <div>
         <v-app-bar :class="header()" color="transparent" flat absolute>
             <v-container class="px-1 d-flex align-center">
-                <div class="logo">
+                <!-- <div class="logo">
                     <v-img @click="$store.commit('utility/changeRoute','/')" :src="require('~/assets/images/logo.png')"
                         style="max-width:60px; cursor: pointer;"></v-img>
-                </div>
+                </div> -->
                 <v-spacer></v-spacer>
                 <div class="hidden-md-and-down">
                     <v-btn text @click="$store.commit('utility/changeRoute','/')">
@@ -13,7 +13,8 @@
                     </v-btn>
                     <v-menu open-on-hover bottom offset-y>
                         <template v-slot:activator="{on, attrs}">
-                            <v-btn v-bing="attrs" v-on="on" text @click="$store.commit('utility/changeRoute','/story')">
+                            <v-btn v-bing="attrs" v-on="on" text
+                                @click="$store.commit('utility/changeRoute','/story#story')">
                                 Our Story
                             </v-btn>
                         </template>
@@ -31,14 +32,14 @@
                     </v-btn>
 
                     <v-btn text @click="$store.commit('utility/changeRoute','/shippieExpediation')">
-                        Shippie Expediation
+                        Shippie Expedition
                     </v-btn>
                     <!-- <ReusableGradientButton class="ml-3" ButtonText="Connect Wallet" /> -->
                 </div>
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-lg-and-up"></v-app-bar-nav-icon>
             </v-container>
         </v-app-bar>
-        <v-navigation-drawer v-model="drawer" app absolute temporary dark color="#827c13">
+        <v-navigation-drawer v-model="drawer" app fixed temporary dark color="#827c13">
             <v-list nav dense>
                 <v-list-item v-for="(item,i) in items" :key="i" @click="$store.commit('utility/changeRoute',item.link)">
                     <v-list-item-title>
@@ -68,7 +69,7 @@ export default {
             },
             {
                 title: 'Our Story',
-                link: '/story'
+                link: '/story#story'
             },
             // {
             //     title: 'Collection',
@@ -79,7 +80,7 @@ export default {
                 link: '/story#roadMap'
             },
             {
-                title: 'Shippie Expediation',
+                title: 'Shippie Expedition',
                 link: '/ShippieExpediation'
             }
             ]
@@ -100,7 +101,8 @@ export default {
 .header {
     background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%);
     height: 100px !important;
-    position: relative !important;
+    position: fixed !important;
+    z-index: 10;
 }
 
 .header .v-toolbar__content {

@@ -3,8 +3,8 @@
         <LandingStory />
         <LandingRealm />
         <!-- <LandingRoadMap /> -->
-        <v-card class="pb-8" flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
-            <v-img :src="require('~/assets/images/Curve.png')" style="margin-top:-1px; border-radius: 0;">
+        <v-card class=" pb-8" flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
+            <v-img :src="require('~/assets/images/Curve.png')" style="margin-top:-1px;">
             </v-img>
             <v-container id="roadMap" class="pa-6 pa-sm-16">
                 <v-row justify="center">
