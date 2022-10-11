@@ -105,7 +105,7 @@ export default {
 }
 
 .widthVideo {
-    width: 220%;
+    width: 300%;
     transform: translate(-8%, -0);
 }
 

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div style="background-color: black">
         <v-container class="mt-8">
             <v-row justify="center">
@@ -56,4 +56,4 @@ export default {
 .text-field .v-text-field__details {
     display: none;
 }
-</style>
+</style> -->

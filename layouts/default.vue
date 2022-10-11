@@ -5,7 +5,6 @@
             <v-main>
                 <Nuxt />
             </v-main>
-            <LayoutFooter />
         </client-only>
     </v-app>
 </template>
