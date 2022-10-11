@@ -20,7 +20,7 @@
         <v-overlay class="overlay" v-if="overlay" :absolute="absolute" :value="overlay" :opacity="opacity"
             @click="playvid()" style="min-height: 500px;">
             <v-card class="pa-0 pa-sm-14" max-width="510" color="transparent" flat>
-                <v-col align="right" class="pa-4 pa-sm-0">
+                <v-col align="right" class="pa-3 pa-sm-0">
                     <!-- <v-img :src="require('~/assets/images/Static-text.png')">
                         <v-card color="transparent" flat style="position:absolute;bottom:0;right:0">
                             <p class="start-btn ml-10">GET IN ALREADY</p>
