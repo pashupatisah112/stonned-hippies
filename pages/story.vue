@@ -6,9 +6,9 @@
         <v-card class=" pb-8" flat style="background: linear-gradient(180deg, #608A5A 4.44%, #646719 104.44%);">
             <v-img :src="require('~/assets/images/Curve.png')" style="margin-top:-1px;">
             </v-img>
-            <v-container id="roadMap" class="pa-6 pa-sm-16">
+            <v-container id="roadMap" class="mt-16 pa-6 pa-sm-16">
                 <v-row justify="center">
-                    <p class="title-roadMap text-h4 pb-1">Road Map</p>
+                    <p class="title-roadMap text-h4 pb-1">Road Map 1.0</p>
                 </v-row>
                 <v-row justify="space-between">
                     <v-col cols="12" md="9" lg="7" align="center">
@@ -26,7 +26,10 @@
                         <RoadmapTimeLine class="d-none d-sm-block" />
                     </v-col>
                     <v-col cols="12" md="3" lg="5" align="center">
-                        <v-img :src="require('~/assets/images/Legendary.png')" max-width="300">
+                        <!-- <v-img :src="require('~/assets/images/Legendary.png')" max-width="300">
+                        </v-img> -->
+                        <v-img class="image-shadow image-size" :src="require('~/assets/images/story-2.png')"
+                            max-width="300">
                         </v-img>
                     </v-col>
                 </v-row>

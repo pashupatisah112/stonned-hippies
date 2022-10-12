@@ -53,13 +53,14 @@
             </v-container>
         </v-app-bar>
         <v-navigation-drawer v-model="drawer" app fixed temporary dark color="#827c13">
-            <v-list nav dense>
-                <v-list-item v-for="(item,i) in items" :key="i" @click="$store.commit('utility/changeRoute',item.link)">
+            <v-list class="mt-6 ml-6" nav dense style="">
+                <v-list-item class="list-item" v-for="(item,i) in items" :key="i"
+                    @click="$store.commit('utility/changeRoute',item.link)">
                     <v-list-item-title>
                         {{item.title}}
                     </v-list-item-title>
                 </v-list-item>
-                <div class="d-flex align-center px-3">
+                <div class="d-flex align-center pa-2">
                     <v-icon small @click="
                       openLink(
                         'https://twitter.com/StonedHippies?t=EvLv7lx-XqFOU4agae2WAA&s=09'
@@ -145,5 +146,16 @@ export default {
 .header2 .v-toolbar__content {
     height: auto !important;
     margin-top: 12px;
+}
+
+.list-item {
+    position: relative;
+}
+
+.list-item:before {
+    content: '';
+    /* position: absolute; */
+    width: 50%;
+    border-bottom: 2px solid #fff;
 }
 </style>

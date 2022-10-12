@@ -29,14 +29,14 @@
                     <div class="cta-box mb-6">
                         <v-img class="flower1" :src="require('~/assets/images/flower1.png')" max-width="100"
                             max-height="100"></v-img>
-                        <p class="cta-text cta-red mb-0">Fuel up your SOL and MINT</p>
+                        <p class="cta-text cta-red mb-0">Fuel up your SOL and <span class="mint-text">MINT</span></p>
                         <p class="cta-text cta-yellow mb-0">Your Stoned Hippie to get on that damn </p>
                         <p class="cta-text cta-green mb-0">Magic bus!</p>
                         <v-img class="flower2" :src="require('~/assets/images/flower2.png')" max-width="100"
                             max-height="100" style="position:absolute"></v-img>
                     </div>
-                    <v-img :src="require('~/assets/images/Link.png')" @click="playvid()" class="mt-2 mx-auto link"
-                        max-width="300"></v-img>
+                    <!-- <v-img :src="require('~/assets/images/Link.png')" @click="playvid()" class="mt-2 mx-auto link"
+                        max-width="300"></v-img> -->
                 </v-col>
             </v-card>
         </v-overlay>
@@ -181,6 +181,11 @@ export default {
     font-size: 40px;
     font-family: 'Psychedelia', sans-serif !important;
     /* color: #E62D61 !important; */
+}
+
+.mint-text {
+    color: #E12C5F;
+    font-size: 50px;
 }
 
 .flower1 {
