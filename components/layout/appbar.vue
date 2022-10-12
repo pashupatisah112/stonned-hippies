@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-app-bar :class="header()" color="transparent" flat absolute>
+        <v-app-bar :class="header()" color="transparent" flat fixed>
             <v-container class="px-1 d-flex align-center">
                 <!-- <div class="logo">
                     <v-img @click="$store.commit('utility/changeRoute','/')" :src="require('~/assets/images/logo.png')"
@@ -115,8 +115,11 @@ export default {
     methods: {
         header() {
             // console.log(this.$route)
-            if (this.$route.name != 'index') {
+            if (this.$route.name == 'index') {
                 return 'header';
+            }
+            else {
+                return 'header2';
             }
         }
     }
@@ -125,13 +128,21 @@ export default {
 
 <style lang="css">
 .header {
-    background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%);
-    height: 100px !important;
-    position: fixed !important;
-    z-index: 10;
+    /* background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%); */
+    /* height: 100px !important; */
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    left: 10;
+    /* z-index: 10; */
 }
 
-.header .v-toolbar__content {
+.header2 {
+    background: linear-gradient(180deg, #AA5E27 0%, #5C5F1A 100%);
+    height: 100px !important;
+}
+
+.header2 .v-toolbar__content {
     height: auto !important;
     margin-top: 12px;
 }

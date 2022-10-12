@@ -144,7 +144,7 @@ export default {
 }
 
 .vol-btn {
-    z-index: 1;
+    z-index: 5;
 }
 
 .mint-btn {

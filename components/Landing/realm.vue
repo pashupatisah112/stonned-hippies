@@ -2,7 +2,7 @@
     <div id="realm">
         <!-- <v-card flat color="transparent">>
         </v-card> -->
-        <v-card flat color="mistyRose" style="margin-bottom:-1px; border-radius: 0 !important; z-index: 0; ">
+        <v-card flat color="mistyRose" style="margin-bottom:-1px; border-radius: 0 !important; z-index: 1; ">
             <v-container class="px-8 px-md-3 py-16" style="color: #000;">
                 <v-row>
                     <v-col cols="12" sm="6">
