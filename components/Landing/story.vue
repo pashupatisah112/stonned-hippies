@@ -68,11 +68,13 @@
                         sufficient.
                         To Peace, Puff and Positivity.</p>
                 </v-row>
-                <div class="pt-16">
+                <v-row class="py-15">
+                </v-row>
+                <div class="pt-12">
                     <v-row justify="center" class="mb-4">
                         <p class="text-h4 text-center">Meet and Greet our 22 Stoned Hippies</p>
                     </v-row>
-                    <v-row class="justify-center justify-md-space-between px-12  ">
+                    <v-row class="justify-center justify-md-space-between px-12">
                         <!-- <client-only> -->
                         <!-- <VueSlickCarousel v-bind="slickSetting"> -->
                         <div v-for="(item, i) in nfts" :key="i">
@@ -82,10 +84,38 @@
                         <!-- </VueSlickCarousel> -->
                         <!-- </client-only> -->
                     </v-row>
-                    <v-row justify="center">
+                    <v-row justify="center" class="mb-6">
                         <ReusableBorderButton @click="$router.push('/stories')" ButtonText="View all" />
                     </v-row>
                 </div>
+            </v-container>
+            <v-container class="px-8 px-md-3 py-16">
+                <v-row justify="center" class="mb-10">
+                    <p class="text-uppercase text-h4">Meet Our Team</p>
+                </v-row>
+                <v-row class="justify-center justify-sm-space-around justify-md-space-between px-12s">
+                    <div v-for="(team, j) in teams" :key="j">
+                        <v-card color="transparent" class=" mx-3 mt-3 mb-6" flat max-width="250">
+                            <div class="team-card rounded-t-xl px-10 pt-10 pb-6 text-center">
+                                <v-img :src="team.image" :lazy-src="team.image" class="rounded-circle" width="160"
+                                    height="160"
+                                    style="border: 3px solid #66854C; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                                    <template v-slot:placeholder>
+                                        <v-row class="fill-height ma-0" align="center" justify="center">
+                                            <v-progress-circular indeterminate color="grey lighten-5">
+                                            </v-progress-circular>
+                                        </v-row>
+                                    </template>
+                                </v-img>
+                            </div>
+                            <div class="team-text rounded-b-xl">
+                                <v-card-subtitle class="pa-4 pb-0" style="font-weight:bold;">{{team.title}}
+                                </v-card-subtitle>
+                                <v-card-text class="pb-8">{{team.text}}</v-card-text>
+                            </div>
+                        </v-card>
+                    </div>
+                </v-row>
             </v-container>
         </v-card>
     </div>
@@ -117,6 +147,32 @@ export default {
                     // text: ' I come with a warning! “Do not come near me” It is because my entire body especially my hair reeks of cheap alcohol and grass. but let me also tell you that these are not cheap alcohol that you smell off me.'
                 }
             ],
+            teams: [
+                {
+                    id: '1',
+                    title: 'SolandPepper',
+                    image: require('~/assets/images/nfts/Fernley.png'),
+                    text: 'Co-Founder and Community head'
+                },
+                {
+                    id: '2',
+                    title: 'Youngflameartist',
+                    image: require('~/assets/images/nfts/Jadeend.png'),
+                    text: 'Lead Artist'
+                },
+                {
+                    id: '3',
+                    title: 'Apeol Dan Arvic',
+                    image: require('~/assets/images/nfts/Pearsyd.png'),
+                    text: 'Growth and Partnerships'
+                },
+                {
+                    id: '4',
+                    title: '0xmachina',
+                    image: require('~/assets/images/nfts/Pearsyd.png'),
+                    text: 'Community and Marketing'
+                }
+            ]
         }
     },
 
@@ -146,5 +202,15 @@ export default {
     bottom: 0;
     width: 50%;
     border-bottom: 3px solid #fff;
+}
+
+.team-card {
+    background: linear-gradient(181.37deg, #BCB9A7 1.17%, #BEBF89 69.72%);
+}
+
+.team-text {
+    background: #fff;
+    color: #000;
+    text-align: center;
 }
 </style>

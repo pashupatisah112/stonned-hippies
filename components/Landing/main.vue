@@ -20,7 +20,7 @@
         <v-overlay class="overlay" v-if="overlay" :absolute="absolute" :value="overlay" :opacity="opacity"
             @click="playvid()" style="min-height: 500px;">
             <v-card class="pa-0 pa-sm-14" max-width="510" color="transparent" flat>
-                <v-col align="right" class="pa-4 pa-sm-0">
+                <v-col align="right" class="pa-3 pa-sm-0">
                     <!-- <v-img :src="require('~/assets/images/Static-text.png')">
                         <v-card color="transparent" flat style="position:absolute;bottom:0;right:0">
                             <p class="start-btn ml-10">GET IN ALREADY</p>
@@ -29,14 +29,14 @@
                     <div class="cta-box mb-6">
                         <v-img class="flower1" :src="require('~/assets/images/flower1.png')" max-width="100"
                             max-height="100"></v-img>
-                        <p class="cta-text cta-red mb-0">Fuel up your SOL and MINT</p>
+                        <p class="cta-text cta-red mb-0">Fuel up your SOL and <span class="mint-text">MINT</span></p>
                         <p class="cta-text cta-yellow mb-0">Your Stoned Hippie to get on that damn </p>
                         <p class="cta-text cta-green mb-0">Magic bus!</p>
                         <v-img class="flower2" :src="require('~/assets/images/flower2.png')" max-width="100"
                             max-height="100" style="position:absolute"></v-img>
                     </div>
-                    <v-img :src="require('~/assets/images/Link.png')" @click="playvid()" class="mt-2 mx-auto link"
-                        max-width="300"></v-img>
+                    <!-- <v-img :src="require('~/assets/images/Link.png')" @click="playvid()" class="mt-2 mx-auto link"
+                        max-width="300"></v-img> -->
                 </v-col>
             </v-card>
         </v-overlay>
@@ -105,7 +105,7 @@ export default {
 }
 
 .widthVideo {
-    width: 220%;
+    width: 300%;
     transform: translate(-8%, -0);
 }
 
@@ -144,7 +144,7 @@ export default {
 }
 
 .vol-btn {
-    z-index: 1;
+    z-index: 5;
 }
 
 .mint-btn {
@@ -181,6 +181,11 @@ export default {
     font-size: 40px;
     font-family: 'Psychedelia', sans-serif !important;
     /* color: #E62D61 !important; */
+}
+
+.mint-text {
+    color: #E12C5F;
+    font-size: 50px;
 }
 
 .flower1 {
