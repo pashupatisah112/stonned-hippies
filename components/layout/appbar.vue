@@ -122,7 +122,10 @@ export default {
             else {
                 return 'header2';
             }
-        }
+        },
+        openLink(item) {
+            window.open(item, "_blank");
+        },
     }
 }
 </script>
