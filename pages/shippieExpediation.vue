@@ -37,6 +37,7 @@
                 </v-row>
             </v-container>
         </v-img>
+
         <!-- <div id="section-explore" class="pa-16" style="background: linear-gradient(180deg, #7D8662 0%, #94958E 100%);">
             <v-container>
                 <v-row justify="center" class="my-4">

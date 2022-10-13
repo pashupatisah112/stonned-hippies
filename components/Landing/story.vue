@@ -38,7 +38,7 @@
                         </v-img>
                     </v-col>
                 </v-row> -->
-                <v-row>
+                <v-row class="mb-6" no-gutter>
                     <p class="title-hippies text-h4 pb-1">
                         Who are the Stoned Hippies ?
                     </p>
@@ -71,50 +71,58 @@
                 <v-row class="py-15">
                 </v-row>
                 <div class="pt-12">
-                    <v-row justify="center" class="mb-4">
-                        <p class="text-h4 text-center">Meet and Greet our 22 Stoned Hippies</p>
-                    </v-row>
-                    <v-row class="justify-center justify-md-space-between px-12">
-                        <!-- <client-only> -->
-                        <!-- <VueSlickCarousel v-bind="slickSetting"> -->
-                        <div v-for="(item, i) in nfts" :key="i">
-                            <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image"
-                                :text=item.text />
-                        </div>
-                        <!-- </VueSlickCarousel> -->
-                        <!-- </client-only> -->
-                    </v-row>
-                    <v-row justify="center" class="mb-6">
-                        <ReusableBorderButton @click="$router.push('/stories')" ButtonText="View all" />
+                    <!-- <v-row justify="center" class="mb-4" no-gutter>
+                    </v-row> -->
+                    <v-row justify="center">
+                        <v-col cols="12" align="center">
+                            <p class="text-h4 text-center">Meet and Greet our 22 Stoned Hippies</p>
+                        </v-col>
+                        <v-col cols="12 mt-n8" align="center">
+                            <client-only>
+                                <VueSlickCarousel v-bind="slickSetting">
+                                    <div v-for="(item, i) in nfts" :key="i">
+                                        <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name"
+                                            :image="item.image" :text=item.text />
+                                    </div>
+                                </VueSlickCarousel>
+                            </client-only>
+                        </v-col>
+                        <v-col cols="12 mt-n8" align="center">
+                            <ReusableBorderButton @click="$router.push('/stories')" ButtonText="View all" />
+                        </v-col>
                     </v-row>
                 </div>
             </v-container>
             <v-container class="px-8 px-md-3 py-16">
-                <v-row justify="center" class="mb-10">
+                <v-row justify="center" class="mt-4">
                     <p class="text-uppercase text-h4">Meet Our Team</p>
                 </v-row>
-                <v-row class="justify-center justify-sm-space-around justify-md-space-between px-12s">
-                    <div v-for="(team, j) in teams" :key="j">
-                        <v-card color="transparent" class=" mx-3 mt-3 mb-6" flat max-width="250">
-                            <div class="team-card rounded-t-xl px-10 pt-10 pb-6 text-center">
-                                <v-img :src="team.image" :lazy-src="team.image" class="rounded-circle" width="160"
-                                    height="160"
-                                    style="border: 3px solid #66854C; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                                    <template v-slot:placeholder>
-                                        <v-row class="fill-height ma-0" align="center" justify="center">
-                                            <v-progress-circular indeterminate color="grey lighten-5">
-                                            </v-progress-circular>
-                                        </v-row>
-                                    </template>
-                                </v-img>
+                <v-row class="justify-center justify-sm-space-around justify-md-space-between px-12 mb-6">
+                    <v-col cols="12" align="center">
+                        <VueSlickCarousel v-bind="slickSetting2">
+                            <div v-for="(team, j) in teams" :key="j">
+                                <v-card color="transparent" class=" mx-3 mt-3 mb-6" flat max-width="250">
+                                    <div class="team-card rounded-t-xl px-10 pt-10 pb-6 text-center">
+                                        <v-img :src="team.image" :lazy-src="team.image" class="rounded-circle"
+                                            width="160" height="160"
+                                            style="border: 3px solid #66854C; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                                            <template v-slot:placeholder>
+                                                <v-row class="fill-height ma-0" align="center" justify="center">
+                                                    <v-progress-circular indeterminate color="grey lighten-5">
+                                                    </v-progress-circular>
+                                                </v-row>
+                                            </template>
+                                        </v-img>
+                                    </div>
+                                    <div class="team-text rounded-b-xl">
+                                        <v-card-subtitle class="pa-4 pb-0" style="font-weight:bold;">{{team.title}}
+                                        </v-card-subtitle>
+                                        <v-card-text class="pb-8">{{team.text}}</v-card-text>
+                                    </div>
+                                </v-card>
                             </div>
-                            <div class="team-text rounded-b-xl">
-                                <v-card-subtitle class="pa-4 pb-0" style="font-weight:bold;">{{team.title}}
-                                </v-card-subtitle>
-                                <v-card-text class="pb-8">{{team.text}}</v-card-text>
-                            </div>
-                        </v-card>
-                    </div>
+                        </VueSlickCarousel>
+                    </v-col>
                 </v-row>
             </v-container>
         </v-card>
@@ -124,6 +132,82 @@
 export default {
     data() {
         return {
+            slickSetting: {
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                rows: 1,
+                responsive: [
+                    {
+                        breakpoint: 1264,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: false,
+                            arrows: true,
+                        },
+                    },
+                    {
+                        breakpoint: 960,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            initialSlide: 2,
+                            arrows: true,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true,
+                        },
+                    },
+                ],
+            },
+            slickSetting2: {
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                rows: 1,
+                responsive: [
+                    {
+                        breakpoint: 1264,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: false,
+                            arrows: true,
+                        },
+                    },
+                    {
+                        breakpoint: 960,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            initialSlide: 2,
+                            arrows: true,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true,
+                        },
+                    },
+                ],
+            },
             nfts: [
                 {
                     id: '1',
