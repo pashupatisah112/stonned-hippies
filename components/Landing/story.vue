@@ -97,7 +97,7 @@
                 <v-row justify="center" class="mt-4">
                     <p class="text-uppercase text-h4">Meet Our Team</p>
                 </v-row>
-                <v-row class="justify-center justify-sm-space-around justify-md-space-between px-12 mb-6">
+                <v-row class="justify-center justify-sm-space-around justify-md-space-between  mb-6">
                     <v-col cols="12" align="center">
                         <VueSlickCarousel v-bind="slickSetting2">
                             <div v-for="(team, j) in teams" :key="j">
@@ -235,25 +235,25 @@ export default {
                 {
                     id: '1',
                     title: 'SolandPepper',
-                    image: require('~/assets/images/nfts/Fernley.png'),
+                    image: require('~/assets/images/Donga.png'),
                     text: 'Co-Founder and Community head'
                 },
                 {
                     id: '2',
                     title: 'Youngflameartist',
-                    image: require('~/assets/images/nfts/Jadeend.png'),
+                    image: require('~/assets/images/Youngflame.png'),
                     text: 'Lead Artist'
                 },
                 {
                     id: '3',
                     title: 'Apeol Dan Arvic',
-                    image: require('~/assets/images/nfts/Pearsyd.png'),
+                    image: require('~/assets/images/Apeoldarnavic.png'),
                     text: 'Growth and Partnerships'
                 },
                 {
                     id: '4',
                     title: '0xmachina',
-                    image: require('~/assets/images/nfts/Pearsyd.png'),
+                    image: require('~/assets/images/0xmachina.png'),
                     text: 'Community and Marketing'
                 }
             ]
