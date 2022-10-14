@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
         <v-row>
             <v-col>
@@ -8,7 +8,7 @@
                 <v-btn icon v-else @click="soundOn()" x-large class="vol-btn">
                     <v-icon x-large>mdi-volume-mute</v-icon>
                 </v-btn>
-            </v-col>
+            </v-col>s
         </v-row>
         <div class="video-container">
             <video muted loop id="bgVideo" class="mt-n16" style="opacity:0.6;">
@@ -74,4 +74,4 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-</style>
+</style> -->
