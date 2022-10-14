@@ -32,8 +32,21 @@
                             class="text-yellow">222</span> Stoned
                         hippies
                         holders, this Shippie Expedition is only
-                        about to get more exhilarating <span style="font-size:30px;">🌻, 🚌, 🚬,
-                            🎸</span></p>
+                        about to get more exhilarating
+                        <span style="font-size:30px;">🌻, 🚌, 🚬, 🎸</span>
+                    </p>
+
+                    <!-- <div class="d-flex align-center justify-space-between">
+                        <v-img class="opacity-img" :src="require('~/assets/images/sunflower.png')" max-width="60"
+                            max-height="60">
+                        </v-img>
+                        <v-img class="opacity-img" :src="require('~/assets/images/bus.png')" max-width="60"
+                            max-height="60"></v-img>
+                        <v-img class="opacity-img" :src="require('~/assets/images/smoke.png')" max-width="60"
+                            max-height="60"></v-img>
+                        <v-img class="opacity-img" :src="require('~/assets/images/music.png')" max-width="60"
+                            max-height="60"></v-img>
+                    </div> -->
                 </v-row>
             </v-container>
         </v-img>
@@ -136,5 +149,9 @@ export default {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.opacity-img .v-image__image {
+    opacity: 1 !important;
 }
 </style>

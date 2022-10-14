@@ -117,7 +117,16 @@
                                     <div class="team-text rounded-b-xl">
                                         <v-card-subtitle class="pa-4 pb-0" style="font-weight:bold;">{{team.title}}
                                         </v-card-subtitle>
-                                        <v-card-text class="pb-8">{{team.text}}</v-card-text>
+                                        <v-card-text class="pb-4">{{team.text}}</v-card-text>
+                                        <div class="d-flex align-center px-3 pb-8 justify-center">
+                                            <v-img class="m3-2" :src="team.socialImg" @click="openLink(team.socialLink)"
+                                                max-width="20" style="color:red; background:red;">
+                                            </v-img>
+                                            <v-img class="ml-2" :src="team.socialImg2"
+                                                @click="openLink(team.socialLink2)" max-width="20"
+                                                style="color:red; background:red;">
+                                            </v-img>
+                                        </div>
                                     </div>
                                 </v-card>
                             </div>
@@ -236,25 +245,41 @@ export default {
                     id: '1',
                     title: 'SolandPepper',
                     image: require('~/assets/images/Donga.png'),
-                    text: 'Co-Founder and Community head'
+                    text: 'Co-Founder and Community head',
+                    socialImg: require('~/assets/images/discord-blue.png'),
+                    socialLink: 'https://discord.gg/FNqSVmzEw3',
+                    socialImg2: require('~/assets/images/twitter-blue.png'),
+                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
                 },
                 {
                     id: '2',
                     title: 'Youngflameartist',
                     image: require('~/assets/images/Youngflame.png'),
-                    text: 'Lead Artist'
+                    text: 'Lead Artist',
+                    socialImg: require('~/assets/images/discord-blue.png'),
+                    socialLink: 'https://discord.gg/FNqSVmzEw3',
+                    socialImg2: require('~/assets/images/twitter-blue.png'),
+                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
                 },
                 {
                     id: '3',
                     title: 'Apeol Dan Arvic',
                     image: require('~/assets/images/Apeoldarnavic.png'),
-                    text: 'Growth and Partnerships'
+                    text: 'Growth and Partnerships',
+                    socialImg: require('~/assets/images/discord-blue.png'),
+                    socialLink: 'https://discord.gg/FNqSVmzEw3',
+                    socialImg2: require('~/assets/images/twitter-blue.png'),
+                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
                 },
                 {
                     id: '4',
                     title: '0xmachina',
                     image: require('~/assets/images/0xmachina.png'),
-                    text: 'Community and Marketing'
+                    text: 'Community and Marketing',
+                    socialImg: require('~/assets/images/discord-blue.png'),
+                    socialLink: 'https://discord.gg/FNqSVmzEw3',
+                    socialImg2: require('~/assets/images/twitter-blue.png'),
+                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
                 }
             ]
         }
