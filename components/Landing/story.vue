@@ -118,7 +118,8 @@
                                         <v-card-subtitle class="pa-4 pb-0" style="font-weight:bold;">{{team.title}}
                                         </v-card-subtitle>
                                         <v-card-text class="pb-4">{{team.text}}</v-card-text>
-                                        <div class="d-flex align-center px-3 pb-8 justify-center">
+                                        <div class="d-flex align-center px-3 pb-8 justify-center"
+                                            style=" cursor: pointer ;">
                                             <v-img class="m3-2" :src="team.socialImg" @click="openLink(team.socialLink)"
                                                 max-width="20" style="color:red; background:red;">
                                             </v-img>
@@ -249,7 +250,7 @@ export default {
                     socialImg: require('~/assets/images/discord-blue.png'),
                     socialLink: 'https://discord.gg/FNqSVmzEw3',
                     socialImg2: require('~/assets/images/twitter-blue.png'),
-                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
+                    socialLink2: 'https://twitter.com/Hippiesoller?t=_ZDdMwCmfi4VVgJBiZcOBg&s=08'
                 },
                 {
                     id: '2',
@@ -259,7 +260,7 @@ export default {
                     socialImg: require('~/assets/images/discord-blue.png'),
                     socialLink: 'https://discord.gg/FNqSVmzEw3',
                     socialImg2: require('~/assets/images/twitter-blue.png'),
-                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
+                    socialLink2: 'https://twitter.com/youngflameartst?t=0K1zn1jeUqucZByGXpJkPA&s=08'
                 },
                 {
                     id: '3',
@@ -269,7 +270,7 @@ export default {
                     socialImg: require('~/assets/images/discord-blue.png'),
                     socialLink: 'https://discord.gg/FNqSVmzEw3',
                     socialImg2: require('~/assets/images/twitter-blue.png'),
-                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
+                    socialLink2: 'https://twitter.com/ApeolDan?t=7gt_Ln3jPFrIcbS8FEf7sQ&s=08'
                 },
                 {
                     id: '4',
@@ -279,7 +280,7 @@ export default {
                     socialImg: require('~/assets/images/discord-blue.png'),
                     socialLink: 'https://discord.gg/FNqSVmzEw3',
                     socialImg2: require('~/assets/images/twitter-blue.png'),
-                    socialLink2: 'https://discord.gg/FNqSVmzEw3'
+                    socialLink2: 'https://twitter.com/0xprarimz?t=jAPyXamtOyd8r__IzHqeoA&s=08'
                 }
             ]
         }
@@ -290,6 +291,11 @@ export default {
     //         return window.innerHeight
     //     }
     // }
+    methods: {
+        openLink(item) {
+            window.open(item, "_blank");
+        }
+    }
 }
 </script>
 
