@@ -7,7 +7,7 @@
             <v-img :src="require('~/assets/images/Curve.png')" style="margin-top:-1px;">
             </v-img>
             <v-container id="roadMap" class="mt-16 pa-6 pa-sm-16">
-                <v-row justify="center">
+                <v-row justify="center" no-gutters>
                     <p class="title-roadMap text-h4 pb-1">Road Map 1.0</p>
                 </v-row>
                 <v-row justify="space-between">
@@ -43,44 +43,6 @@
 export default {
     data() {
         return {
-            slickSetting: {
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows: true,
-                rows: 3,
-                responsive: [
-                    {
-                        breakpoint: 1264,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: false,
-                            arrows: true,
-                        },
-                    },
-                    {
-                        breakpoint: 960,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2,
-                            initialSlide: 2,
-                            arrows: true,
-                        },
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            arrows: true,
-                        },
-                    },
-                ],
-            },
 
             roadmap: [
 
