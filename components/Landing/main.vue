@@ -75,12 +75,13 @@ export default {
             }
         },
         mint(){
-            if(window.location.origin =='https://stonedhippies.io/'){
-                window.location.href='https://mint.stonedhippies.io'
-            }
-            else{
-                window.location.href='https://staging-mint.stonedhippies.io'
-            }
+            window.location.href='https://mint.stonedhippies.io'
+
+            // if(window.location.origin =='https://stonedhippies.io/'){
+            // }
+            // else{
+            //     window.location.href='https://staging-mint.stonedhippies.io'
+            // }
         },
         playvid() {
             var vid = document.getElementById("bgVideo");
