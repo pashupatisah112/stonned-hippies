@@ -72,9 +72,9 @@
             <div class="timeline-text">
                 <p class="mb-0">October - December 2022</p>
             </div>
-            <div class="timeline-circle">
-            </div>
-
+            <!-- <div class="timeline-circle">
+            </div> -->
+            <div style="font-size:30px;">🚌</div>
             <v-img class="timeline-box timeline-box-1 timeline-box-rotate"
                 :src="require('~/assets/images/timeline-box.svg')" max-width="300">
                 <p>Mint and Secondary Market Listing, Tokenomics and Utilities, Stake to earn $SHR, Xmas Metaverse

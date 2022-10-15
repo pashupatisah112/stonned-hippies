@@ -54,6 +54,6 @@ export default {
 
 <style>
 .text-card {
-    min-height: 200px;
+    min-height: 180px;
 }
 </style>

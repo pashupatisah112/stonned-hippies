@@ -17,8 +17,8 @@
                 Your browser does not support HTML5 video.
             </video>
         </div>
-        <v-overlay class="overlay" v-if="overlay" :absolute="absolute" :value="overlay" :opacity="opacity"
-            @click="playvid()" style="min-height: 500px;">
+        <v-overlay :class="hidden" class="overlay" v-if="overlay" :absolute="absolute" :value="overlay"
+            :opacity="opacity" @click="playvid()" style="min-height: 500px;">
             <v-card class="pa-0 pa-sm-14" max-width="510" color="transparent" flat>
                 <v-col align="right" class="pa-3 pa-sm-0">
                     <!-- <v-img :src="require('~/assets/images/Static-text.png')">
@@ -87,6 +87,7 @@ export default {
             vid.play();
             vid.muted = false;
             this.overlay = false;
+            this.hidden = false;
             this.playing = true
         },
         soundOn() {
@@ -208,8 +209,6 @@ export default {
 
 
 .overlay .v-overlay__scrim {
-    /* background: linear-gradient(180deg, #767924 0%, #608A5A 94.77%); */
-    /* background: #32484E !important; */
-    background: #202B07 !important;
+    background: #3f4213 !important;
 }
 </style>
