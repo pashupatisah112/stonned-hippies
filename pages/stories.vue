@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-16" style="margin-top:100px; background: linear-gradient(180deg, #64671A 0%, #608A5A 94.77%);">
+    <div class="pt-8" style="margin-top:100px; background: linear-gradient(180deg, #64671A 0%, #608A5A 94.77%);">
         <v-container>
             <v-row>
                 <v-breadcrumbs :items="items" style="color:white" dark>
@@ -8,13 +8,15 @@
                     </template>
                 </v-breadcrumbs>
             </v-row>
-            <v-row justify="center">
-                <p class="text-h4">Stories</p>
+            <v-row justify="center" no-gutter>
+                <v-col cols="12" align="center">
+                    <p class="text-h4">Stories</p>
+                </v-col>
+                <v-col cols="12" align="center">
+                    <p>22 NFT Character Stories | Stoned Hippies Realm</p>
+                </v-col>
             </v-row>
-            <v-row justify="center">
-                <p>22 NFT Character Stories | Stoned Hippies Realm</p>
-            </v-row>
-            <v-row class="justify-center justify-md-space-between mb-8 pa-12">
+            <v-row class="justify-center justify-md-space-between mb-8 px-10">
                 <div v-for="(item, i) in nfts" :key="i">
                     <GalleryStoryCard :galleryId="item.id" :title="item.gallery_name" :image="item.image"
                         :text="item.text" />

@@ -6,7 +6,7 @@
             <v-container class="px-8 px-md-3 py-16" style="color: #000;">
                 <v-row>
                     <v-col cols="12" sm="6">
-                        <v-row class="mb-6">
+                        <v-row class="mb-6" no-gutter>
                             <!-- <p class="title-story text-h4 text-capitalize pb-1" style="width:240px;">
                                 Stoned hippies realm(shr)
                             </p> -->
